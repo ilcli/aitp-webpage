@@ -1,10 +1,15 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./theme-toggle";
 import { useState } from "react";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className="bg-background/80 sticky top-0 z-50 border-b border-accent-200 backdrop-blur-md dark:border-accent-800">
@@ -12,44 +17,59 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600">
                 <span className="text-sm font-bold text-white">AI</span>
               </div>
               <span className="ml-2 text-xl font-bold text-foreground">
                 AITP
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a
-                href="#services"
-                className="nav-link text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+              <Link
+                href="/services"
+                className={`nav-link transition-colors ${
+                  isActive("/services")
+                    ? "font-medium text-primary-600 dark:text-primary-400"
+                    : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+                }`}
               >
                 Services
-              </a>
-              <a
-                href="#about"
-                className="nav-link text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+              </Link>
+              <Link
+                href="/about"
+                className={`nav-link transition-colors ${
+                  isActive("/about")
+                    ? "font-medium text-primary-600 dark:text-primary-400"
+                    : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+                }`}
               >
                 About
-              </a>
-              <a
-                href="#contact"
-                className="nav-link text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+              </Link>
+              <Link
+                href="/contact"
+                className={`nav-link transition-colors ${
+                  isActive("/contact")
+                    ? "font-medium text-primary-600 dark:text-primary-400"
+                    : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+                }`}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Right side - CTA and Theme Toggle */}
           <div className="hidden items-center space-x-4 md:flex">
             <ThemeToggle />
-            <a href="#contact" className="btn-primary">
+            <a
+              href="https://calendly.com/elifishbakh/30min"
+              className="btn-primary"
+            >
               Let&rsquo;s Talk
             </a>
           </div>
@@ -105,30 +125,42 @@ export function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="space-y-1 border-b border-accent-200 bg-background px-2 pb-3 pt-2 dark:border-accent-800 sm:px-3">
-            <a
-              href="#services"
-              className="block px-3 py-2 text-base font-medium text-accent-700 transition-colors hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+            <Link
+              href="/services"
+              className={`block px-3 py-2 text-base font-medium transition-colors ${
+                isActive("/services")
+                  ? "font-semibold text-primary-600 dark:text-primary-400"
+                  : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Services
-            </a>
-            <a
-              href="#about"
-              className="block px-3 py-2 text-base font-medium text-accent-700 transition-colors hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+            </Link>
+            <Link
+              href="/about"
+              className={`block px-3 py-2 text-base font-medium transition-colors ${
+                isActive("/about")
+                  ? "font-semibold text-primary-600 dark:text-primary-400"
+                  : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               About
-            </a>
-            <a
-              href="#contact"
-              className="block px-3 py-2 text-base font-medium text-accent-700 transition-colors hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+            </Link>
+            <Link
+              href="/contact"
+              className={`block px-3 py-2 text-base font-medium transition-colors ${
+                isActive("/contact")
+                  ? "font-semibold text-primary-600 dark:text-primary-400"
+                  : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
             <div className="pt-2">
               <a
-                href="#contact"
+                href="https://calendly.com/elifishbakh/30min"
                 className="btn-primary w-full"
                 onClick={() => setIsMenuOpen(false)}
               >

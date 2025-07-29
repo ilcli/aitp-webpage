@@ -23,7 +23,7 @@ export function Hero() {
           {/* CTA Button */}
           <div className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#contact"
+              href="https://calendly.com/elifishbakh/30min"
               className="btn-primary transform px-10 py-4 text-lg font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl sm:px-12 sm:py-5"
             >
               🚀 Book a Free Strategy Call
