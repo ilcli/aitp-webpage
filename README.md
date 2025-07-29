@@ -1,104 +1,116 @@
+# AITP - AI Training & Process
 
----
+A modern Next.js landing page for AITP, a consultancy focused on AI automation and training solutions.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd aitp-agency
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🔧 Tech Stack
 
-- [x] Next.js 14+ (App Router optional)
-- [x] TailwindCSS 3.x
-- [x] TypeScript
-- [x] Responsive design (mobile-first)
-- [x] Dark/light mode toggle
-- [x] Cursor.dev (Claude CLI integration optional later)
+- **Framework**: Next.js 14+ (App Router)
+- **Styling**: TailwindCSS 3.x
+- **Language**: TypeScript
+- **UI Components**: Custom React components
+- **Theme**: next-themes for dark/light mode
+- **Font**: Inter (via next/font/google)
+- **Deployment**: Vercel
 
----
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles
+│   ├── layout.tsx           # Root layout with metadata
+│   └── page.tsx             # Main landing page
+├── components/
+│   ├── call-to-action.tsx   # Mid-page CTA section
+│   ├── features.tsx         # Services/features section
+│   ├── footer.tsx           # Footer component
+│   ├── hero.tsx             # Hero section
+│   ├── navbar.tsx           # Navigation bar
+│   ├── social-proof.tsx     # Client logos section
+│   ├── theme-provider.tsx   # Theme context provider
+│   └── theme-toggle.tsx     # Dark/light mode toggle
+└── lib/                     # Utility functions
+```
 
 ## 📌 Page Sections
 
-### 1. **Navbar**
-- Sticky top bar with logo and 3 links
-- Right-aligned CTA: “Let’s Talk”
-- Dark mode toggle
+1. **Navbar** - Sticky navigation with logo, links, and dark mode toggle
+2. **Hero Section** - Bold headline with CTA button
+3. **Social Proof** - Client logos with trust messaging
+4. **Features/Services** - Value proposition cards
+5. **Call to Action** - Mid-page conversion section
+6. **Footer** - Contact info and additional links
 
----
+## 🛠️ Available Scripts
 
-### 2. **Hero Section**
-> ✨ Bold and clear above-the-fold message
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint checks
 
-| Element      | Example                                                                 |
-|--------------|-------------------------------------------------------------------------|
-| Headline     | "Turn Ideas into AI Systems That Work"                                  |
-| Subheading   | "We co-build automation and training solutions that save time and scale impact." |
-| CTA Button   | “Book a Free Strategy Call”                                             |
-| Optional     | AI prompt box or animation                                              |
+## 🌚 Styling Guidelines
 
----
+- Mobile-first responsive design
+- Clean layouts with grid/flexbox
+- Inter font family (Google Fonts)
+- Pill-shaped buttons with hover effects
+- Dark/light mode support
+- Tailwind CSS utility classes
 
-### 3. **Logos / Social Proof**
-- Row of client logos (real or placeholder)
-- Heading: “Trusted by teams working in…”
+## 🚀 Deployment
 
----
+This project is optimized for [Vercel](https://vercel.com/) deployment:
 
-### 4. **Features / Services**
-- 3 or 6 value cards with icons
-- Each card has:
-  - Title
-  - Short benefit-focused description
-  - Optional CTA or Learn More
+1. Push to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically on push to main branch
 
-**Examples:**
-| Title               | Description                                                                 |
-|---------------------|------------------------------------------------------------------------------|
-| AI Automation       | Build custom workflows using free tools like Sheets, Telegram, and APIs.     |
-| Training & Change   | Empower your team to adopt AI without resistance or confusion.               |
-| No-Code Systems     | Get smart systems that feel native, without subscriptions or dev time.       |
+## 📄 License
 
----
+This project is licensed under the MIT License.
 
-### 5. **Call to Action (Mid-page CTA)**
-- Block quote or image on left
-- Text and CTA on right:
-  > “Let’s build a smart system that actually saves time — not adds work.”
+## 🤝 Contributing
 
----
-
-### 6. **Footer**
-- Email address or Telegram link
-- Dark/light mode toggle (repeated)
-- Short sentence:
-  > “© 2025 AITP – Built for clarity & action”
-
----
-
-## 🌚 Styling
-
-- Use Tailwind + custom config for brand colors
-- Prefer clean layouts (grid/flexbox) with ample padding
-- Use soft gradients or light glass effects where relevant
-- Typography: Inter / Open Sans / Manrope (Google Fonts)
-- Button style: Pill-shaped, hover-shadow, responsive
-
----
-
-## 🚀 Stretch Goals
-
-- [ ] Claude integration: generate service copy or answers from prompt
-- [ ] Client dashboard: allow scheduling, PDF exports, etc
-- [ ] Blog / Use Cases section
-
----
-
-## 🧪 Testing
-
-- Manual testing on mobile, tablet, desktop
-- Lighthouse performance & accessibility pass
-- Vercel preview link
-
----
-
-## 🌐 Deployment
-
-- [x] Free hosting with [Vercel](https://vercel.com/)
-- [ ] Custom domain (e.g. aitp.ai or beamwise.ai)
-# aitp-webpage
-# aitp-webpage
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request

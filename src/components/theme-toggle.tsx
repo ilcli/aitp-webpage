@@ -14,10 +14,10 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <button
-        className="p-2 rounded-full bg-accent-100 hover:bg-accent-200 dark:bg-accent-800 dark:hover:bg-accent-700 transition-colors"
+        className="rounded-full bg-accent-100 p-2 transition-colors hover:bg-accent-200 dark:bg-accent-800 dark:hover:bg-accent-700"
         disabled
       >
-        <div className="w-5 h-5" />
+        <div className="h-5 w-5" />
       </button>
     );
   }
@@ -25,12 +25,12 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-full bg-accent-100 hover:bg-accent-200 dark:bg-accent-800 dark:hover:bg-accent-700 transition-colors"
+      className="rounded-full bg-accent-100 p-2 transition-all duration-200 hover:scale-110 hover:bg-accent-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 active:scale-95 dark:bg-accent-800 dark:hover:bg-accent-700"
       aria-label="Toggle theme"
     >
       {theme === "dark" ? (
         <svg
-          className="w-5 h-5 text-accent-900 dark:text-accent-100"
+          className="h-5 w-5 text-accent-900 dark:text-accent-100"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -44,7 +44,7 @@ export function ThemeToggle() {
         </svg>
       ) : (
         <svg
-          className="w-5 h-5 text-accent-900 dark:text-accent-100"
+          className="h-5 w-5 text-accent-900 dark:text-accent-100"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

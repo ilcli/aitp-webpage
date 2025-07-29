@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "prefer-const": "error",
+    "no-var": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-key": "error"
+  },
+  "root": true
 }
