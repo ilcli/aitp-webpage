@@ -7,7 +7,7 @@ export default function Services() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="dark:to-accent-950 bg-gradient-to-br from-background to-accent-50 py-20">
+      <section className="bg-gradient-to-br from-primary-50 via-background to-accent-50 py-20 dark:from-accent-900 dark:via-background dark:to-accent-800">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
@@ -26,7 +26,7 @@ export default function Services() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
             {/* AI Automation */}
-            <div className="rounded-lg border border-accent-200 bg-white p-8 shadow-sm dark:border-accent-800 dark:bg-accent-900">
+            <div className="rounded-lg border border-accent-200 bg-white/80 p-8 shadow-sm backdrop-blur-sm dark:border-accent-800 dark:bg-accent-900/80">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-600">
                 <span className="text-xl text-white">⚙️</span>
               </div>
@@ -72,7 +72,7 @@ export default function Services() {
             </div>
 
             {/* Training & Change */}
-            <div className="rounded-lg border border-accent-200 bg-white p-8 shadow-sm dark:border-accent-800 dark:bg-accent-900">
+            <div className="rounded-lg border border-accent-200 bg-white/80 p-8 shadow-sm backdrop-blur-sm dark:border-accent-800 dark:bg-accent-900/80">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-600">
                 <span className="text-xl text-white">🎯</span>
               </div>
@@ -118,7 +118,7 @@ export default function Services() {
             </div>
 
             {/* No-Code Systems */}
-            <div className="rounded-lg border border-accent-200 bg-white p-8 shadow-sm dark:border-accent-800 dark:bg-accent-900">
+            <div className="rounded-lg border border-accent-200 bg-white/80 p-8 shadow-sm backdrop-blur-sm dark:border-accent-800 dark:bg-accent-900/80">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-600">
                 <span className="text-xl text-white">🔧</span>
               </div>
@@ -167,7 +167,7 @@ export default function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="dark:bg-accent-950 bg-accent-50 py-16">
+      <section className="bg-accent-50 py-16 dark:bg-accent-900">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center text-3xl font-bold text-foreground">
             Our Process

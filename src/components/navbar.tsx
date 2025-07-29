@@ -66,7 +66,10 @@ export function Navbar() {
           {/* Right side - CTA and Theme Toggle */}
           <div className="hidden items-center space-x-4 md:flex">
             <ThemeToggle />
-            <a href="#contact" className="btn-primary">
+            <a
+              href="https://calendly.com/elifishbakh/30min"
+              className="btn-primary"
+            >
               Let&rsquo;s Talk
             </a>
           </div>
@@ -157,7 +160,7 @@ export function Navbar() {
             </Link>
             <div className="pt-2">
               <a
-                href="#contact"
+                href="https://calendly.com/elifishbakh/30min"
                 className="btn-primary w-full"
                 onClick={() => setIsMenuOpen(false)}
               >
