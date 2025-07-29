@@ -1,8 +1,13 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./theme-toggle";
 
 export function Footer() {
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
+
   return (
     <footer
       id="contact"
@@ -81,24 +86,36 @@ export function Footer() {
               Quick Links
             </h3>
             <div className="space-y-3">
-              <a
-                href="#services"
-                className="block text-accent-600 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
+              <Link
+                href="/services"
+                className={`block transition-colors ${
+                  isActive("/services")
+                    ? "font-medium text-primary-600 dark:text-primary-400"
+                    : "text-accent-600 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
+                }`}
               >
                 Services
-              </a>
-              <a
-                href="#about"
-                className="block text-accent-600 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
+              </Link>
+              <Link
+                href="/about"
+                className={`block transition-colors ${
+                  isActive("/about")
+                    ? "font-medium text-primary-600 dark:text-primary-400"
+                    : "text-accent-600 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
+                }`}
               >
                 About
-              </a>
-              <a
-                href="#contact"
-                className="block text-accent-600 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
+              </Link>
+              <Link
+                href="/contact"
+                className={`block transition-colors ${
+                  isActive("/contact")
+                    ? "font-medium text-primary-600 dark:text-primary-400"
+                    : "text-accent-600 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
+                }`}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -159,18 +176,18 @@ export function Footer() {
             © 2025 AITP – Built for clarity & action
           </p>
           <div className="mt-4 flex space-x-6 sm:mt-0">
-            <a
+            <Link
               href="/privacy"
               className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
             >
               Privacy Policy
-            </a>
-            <a
+            </Link>
+            <Link
               href="/terms"
               className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
             >
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
