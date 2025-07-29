@@ -58,17 +58,31 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission - in production, this would call an API
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // For now, we'll just log the form data
-      console.log("Form submitted:", formData);
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Something went wrong");
+      }
 
       setIsSubmitted(true);
       setFormData({ name: "", email: "", company: "", message: "" });
     } catch (error) {
       console.error("Form submission error:", error);
-      // In production, show an error message to the user
+      // Show error message to user
+      setErrors({
+        message:
+          error instanceof Error
+            ? error.message
+            : "Failed to send message. Please try again.",
+      });
     }
 
     setIsSubmitting(false);
