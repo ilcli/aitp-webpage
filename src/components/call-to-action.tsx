@@ -1,4 +1,8 @@
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+
 export function CallToAction() {
+  const t = useTranslations('cta');
   return (
     <section className="bg-gradient-to-r from-primary-600 to-primary-700 py-24 dark:from-primary-800 dark:to-primary-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -21,19 +25,18 @@ export function CallToAction() {
                 </svg>
                 <div>
                   <blockquote className="mb-4 text-xl font-medium leading-relaxed text-white">
-                    &ldquo;Let&rsquo;s build a smart system that actually saves
-                    time — not adds work.&rdquo;
+                    &ldquo;{t('testimonial')}&rdquo;
                   </blockquote>
                   <div className="flex items-center">
                     <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-white/20">
                       <span className="text-sm font-semibold text-white">
-                        AI
+                        S
                       </span>
                     </div>
                     <div>
-                      <p className="font-medium text-white/90">AITP Agency</p>
+                      <p className="font-medium text-white/90">Synqer.ai</p>
                       <p className="text-sm text-white/70">
-                        AI Systems That Work
+                        {t('author')}
                       </p>
                     </div>
                   </div>
@@ -45,27 +48,25 @@ export function CallToAction() {
           {/* Right side - CTA */}
           <div className="text-white">
             <h2 className="mb-6 text-3xl font-bold sm:text-4xl">
-              Ready to Transform Your Business?
+              {t('title')}
             </h2>
             <p className="mb-8 text-xl leading-relaxed text-white/90">
-              Stop wrestling with complex tools and start building systems that
-              your team will actually use. Book a free strategy call and
-              let&rsquo;s discuss how AI can work for you.
+              {t('subtitle')}
             </p>
 
             <div className="space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
               <a
-                href="https://calendly.com/elifishbakh/30min"
+                href="https://calendly.com/synqer-ai/consultation"
                 className="btn inline-block w-full bg-white text-center text-primary-600 shadow-soft-lg hover:bg-white/90 sm:w-auto"
               >
-                Book Free Strategy Call
+                {t('button')}
               </a>
-              <a
+              <Link
                 href="/about"
                 className="btn inline-block w-full border-2 border-white text-center text-white hover:bg-white hover:text-primary-600 sm:w-auto"
               >
                 Learn Our Process
-              </a>
+              </Link>
             </div>
 
             {/* Trust indicators */}

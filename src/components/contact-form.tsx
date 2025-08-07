@@ -1,28 +1,30 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from 'next-intl';
 
 interface FormData {
   name: string;
   email: string;
-  company: string;
-  message: string;
+  organization: string;
+  challenge: string;
 }
 
 interface FormErrors {
   name?: string;
   email?: string;
-  message?: string;
+  organization?: string;
+  challenge?: string;
 }
 
 export function ContactForm() {
+  const t = useTranslations('contact.form');
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    company: "",
-    message: "",
+    organization: "",
+    challenge: "",
   });
-
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -40,10 +42,12 @@ export function ContactForm() {
       newErrors.email = "Please enter a valid email address";
     }
 
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters long";
+    if (!formData.organization.trim()) {
+      newErrors.organization = "Organization name is required";
+    }
+
+    if (!formData.challenge.trim()) {
+      newErrors.challenge = "Challenge selection is required";
     }
 
     setErrors(newErrors);
@@ -56,6 +60,7 @@ export function ContactForm() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setErrors({});
 
     try {
       const response = await fetch("/api/contact", {
@@ -73,12 +78,11 @@ export function ContactForm() {
       }
 
       setIsSubmitted(true);
-      setFormData({ name: "", email: "", company: "", message: "" });
+      setFormData({ name: "", email: "", organization: "", challenge: "" });
     } catch (error) {
       console.error("Form submission error:", error);
-      // Show error message to user
       setErrors({
-        message:
+        challenge:
           error instanceof Error
             ? error.message
             : "Failed to send message. Please try again.",
@@ -89,7 +93,7 @@ export function ContactForm() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -102,166 +106,145 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="rounded-lg bg-green-50 p-8 text-center dark:bg-green-900/20">
-        <div className="mb-4 text-4xl text-green-600 dark:text-green-400">
-          ✓
-        </div>
-        <h3 className="mb-2 text-xl font-semibold text-foreground">
-          Thank you for your message!
+      <div className="rounded-lg border border-green-200 bg-green-50 p-6 dark:border-green-800 dark:bg-green-900/20">
+        <h3 className="mb-2 text-lg font-semibold text-green-800 dark:text-green-200">
+          {t('success')}
         </h3>
-        <p className="text-accent-600 dark:text-accent-400">
-          We&apos;ll get back to you within 24 hours.
+        <p className="text-green-700 dark:text-green-300">
+          We&apos;ll get back to you within 24 hours to discuss your municipal automation needs.
         </p>
-        <button
-          onClick={() => setIsSubmitted(false)}
-          className="mt-4 text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
-        >
-          Send another message
-        </button>
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        <div>
-          <label
-            htmlFor="name"
-            className="mb-2 block text-sm font-medium text-foreground"
-          >
-            Name *
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className={`w-full rounded-lg border px-4 py-3 ${
-              errors.name
-                ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                : "border-accent-300 focus:border-primary-500 focus:ring-primary-500"
-            } text-foreground placeholder-accent-500 focus:outline-none focus:ring-2 focus:ring-opacity-50 dark:border-accent-700 dark:bg-accent-900`}
-            placeholder="Your full name"
-          />
-          {errors.name && (
-            <p className="mt-1 text-sm text-red-600 dark:text-red-400">
-              {errors.name}
-            </p>
-          )}
-        </div>
-
-        <div>
-          <label
-            htmlFor="email"
-            className="mb-2 block text-sm font-medium text-foreground"
-          >
-            Email *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={`w-full rounded-lg border px-4 py-3 ${
-              errors.email
-                ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                : "border-accent-300 focus:border-primary-500 focus:ring-primary-500"
-            } text-foreground placeholder-accent-500 focus:outline-none focus:ring-2 focus:ring-opacity-50 dark:border-accent-700 dark:bg-accent-900`}
-            placeholder="your@email.com"
-          />
-          {errors.email && (
-            <p className="mt-1 text-sm text-red-600 dark:text-red-400">
-              {errors.email}
-            </p>
-          )}
-        </div>
-      </div>
-
+      {/* Name Field */}
       <div>
         <label
-          htmlFor="company"
+          htmlFor="name"
           className="mb-2 block text-sm font-medium text-foreground"
         >
-          Company
+          {t('name')} <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
-          id="company"
-          name="company"
-          value={formData.company}
+          id="name"
+          name="name"
+          value={formData.name}
           onChange={handleChange}
-          className="w-full rounded-lg border border-accent-300 px-4 py-3 text-foreground placeholder-accent-500 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50 dark:border-accent-700 dark:bg-accent-900"
-          placeholder="Your company name (optional)"
+          className={`w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
+            errors.name
+              ? "border-red-300 focus:ring-red-500"
+              : "border-accent-300 focus:ring-primary-500 dark:border-accent-700"
+          } bg-background text-foreground`}
+          placeholder="Your full name"
         />
-      </div>
-
-      <div>
-        <label
-          htmlFor="message"
-          className="mb-2 block text-sm font-medium text-foreground"
-        >
-          Message *
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={6}
-          value={formData.message}
-          onChange={handleChange}
-          className={`w-full rounded-lg border px-4 py-3 ${
-            errors.message
-              ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-              : "border-accent-300 focus:border-primary-500 focus:ring-primary-500"
-          } resize-y text-foreground placeholder-accent-500 focus:outline-none focus:ring-2 focus:ring-opacity-50 dark:border-accent-700 dark:bg-accent-900`}
-          placeholder="Tell us about your project or how we can help..."
-        />
-        {errors.message && (
-          <p className="mt-1 text-sm text-red-600 dark:text-red-400">
-            {errors.message}
-          </p>
+        {errors.name && (
+          <p className="mt-1 text-sm text-red-600">{errors.name}</p>
         )}
       </div>
 
+      {/* Email Field */}
+      <div>
+        <label
+          htmlFor="email"
+          className="mb-2 block text-sm font-medium text-foreground"
+        >
+          {t('email')} <span className="text-red-500">*</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          className={`w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
+            errors.email
+              ? "border-red-300 focus:ring-red-500"
+              : "border-accent-300 focus:ring-primary-500 dark:border-accent-700"
+          } bg-background text-foreground`}
+          placeholder="your.email@municipality.gov"
+        />
+        {errors.email && (
+          <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+        )}
+      </div>
+
+      {/* Organization Field */}
+      <div>
+        <label
+          htmlFor="organization"
+          className="mb-2 block text-sm font-medium text-foreground"
+        >
+          {t('organization')} <span className="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="organization"
+          name="organization"
+          value={formData.organization}
+          onChange={handleChange}
+          className={`w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
+            errors.organization
+              ? "border-red-300 focus:ring-red-500"
+              : "border-accent-300 focus:ring-primary-500 dark:border-accent-700"
+          } bg-background text-foreground`}
+          placeholder="City of Springfield, Metro Regional Authority, etc."
+        />
+        {errors.organization && (
+          <p className="mt-1 text-sm text-red-600">{errors.organization}</p>
+        )}
+      </div>
+
+      {/* Challenge Selection */}
+      <div>
+        <label
+          htmlFor="challenge"
+          className="mb-2 block text-sm font-medium text-foreground"
+        >
+          {t('challenge')} <span className="text-red-500">*</span>
+        </label>
+        <select
+          id="challenge"
+          name="challenge"
+          value={formData.challenge}
+          onChange={handleChange}
+          className={`w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
+            errors.challenge
+              ? "border-red-300 focus:ring-red-500"
+              : "border-accent-300 focus:ring-primary-500 dark:border-accent-700"
+          } bg-background text-foreground`}
+        >
+          <option value="">Select your biggest data challenge...</option>
+          <option value="manual">{t('challengeOptions.manual')}</option>
+          <option value="scattered">{t('challengeOptions.scattered')}</option>
+          <option value="compliance">{t('challengeOptions.compliance')}</option>
+          <option value="other">{t('challengeOptions.other')}</option>
+        </select>
+        {errors.challenge && (
+          <p className="mt-1 text-sm text-red-600">{errors.challenge}</p>
+        )}
+      </div>
+
+      {/* Submit Button */}
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`btn-primary w-full ${
+        className={`w-full rounded-lg px-6 py-3 font-medium text-white transition-colors ${
           isSubmitting
-            ? "cursor-not-allowed opacity-50"
-            : "hover:bg-primary-700 dark:hover:bg-primary-500"
+            ? "cursor-not-allowed bg-accent-400 dark:bg-accent-600"
+            : "bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
         }`}
       >
-        {isSubmitting ? (
-          <span className="flex items-center justify-center">
-            <svg
-              className="-ml-1 mr-3 h-5 w-5 animate-spin text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="4"
-              ></circle>
-              <path
-                className="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-              ></path>
-            </svg>
-            Sending...
-          </span>
-        ) : (
-          "Send Message"
-        )}
+        {isSubmitting ? t('submitting') : t('submit')}
       </button>
+
+      {errors.challenge && !formData.challenge && (
+        <p className="text-center text-sm text-red-600">
+          {t('error')}
+        </p>
+      )}
     </form>
   );
 }

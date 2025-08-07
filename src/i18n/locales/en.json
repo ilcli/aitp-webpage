@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Schedule Consultation"
+  },
+  "hero": {
+    "headline": "Transform",
+    "typewriter": {
+      "words": ["Outdated Systems", "Manual Processes", "Data Chaos", "Bureaucracy"]
+    },
+    "subtitle": "into Smart Municipal Solutions",
+    "subheading": "Reduce manual data entry by 80-90%. Accelerate report generation from weeks to hours. Improve decision accuracy with real-time analytics.",
+    "cta": {
+      "primary": "Schedule Consultation",
+      "secondary": "View Demo"
+    },
+    "dashboard": {
+      "title": "Municipal Command Center",
+      "metric1": "Manual Tasks Reduced",
+      "metric1Value": "87%",
+      "metric2": "Report Generation",
+      "metric2Value": "24x Faster",
+      "metric3": "Data Accuracy",
+      "metric3Value": "99.9%",
+      "status": "Real-time monitoring active"
+    }
+  },
+  "socialProof": {
+    "title": "Trusted by Leading Municipalities",
+    "subtitle": "Empowering local governments with smart data solutions"
+  },
+  "features": {
+    "title": "Transform Your Municipal Operations",
+    "subtitle": "Proven solutions that deliver measurable results",
+    "card1": {
+      "title": "Automated Data Processing",
+      "description": "Eliminate 80-90% of manual data entry. Our AI systems process permits, licenses, and citizen requests automatically, freeing your staff for meaningful work."
+    },
+    "card2": {
+      "title": "Instant Report Generation",
+      "description": "Generate compliance reports, budget analyses, and performance metrics in hours instead of weeks. Real-time dashboards for informed decision-making."
+    },
+    "card3": {
+      "title": "Regulatory Compliance",
+      "description": "Stay compliant automatically. Our systems track regulatory changes and ensure your processes meet all municipal, state, and federal requirements."
+    },
+    "card4": {
+      "title": "Citizen Service Portal",
+      "description": "Modern self-service portals reduce call volume by 60%. Citizens can track requests, submit applications, and access services 24/7."
+    },
+    "card5": {
+      "title": "Department Integration",
+      "description": "Break down data silos. Connect planning, finance, public works, and emergency services with unified data platforms."
+    },
+    "card6": {
+      "title": "Staff Training & Support",
+      "description": "Comprehensive training ensures smooth adoption. Your team becomes proficient with new systems, maximizing ROI on digital transformation."
+    }
+  },
+  "cta": {
+    "title": "Ready to Modernize Your Municipality?",
+    "subtitle": "Join forward-thinking local governments already transforming their operations",
+    "button": "Get Your Free Assessment",
+    "testimonial": "Synqer.ai reduced our permit processing time by 75% and improved citizen satisfaction scores dramatically.",
+    "author": "Deputy City Manager"
+  },
+  "footer": {
+    "tagline": "Smart Solutions for Modern Municipalities",
+    "contact": {
+      "title": "Contact",
+      "email": "hello@synqer.ai",
+      "phone": "+1 (555) 123-4567"
+    },
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "security": "Security",
+      "compliance": "Compliance"
+    },
+    "copyright": "© 2024 Synqer.ai. All rights reserved."
+  },
+  "contact": {
+    "title": "Let's Transform Your Municipality",
+    "subtitle": "Schedule a consultation to see how we can help modernize your operations",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "organization": "Municipality/Organization",
+      "challenge": "What's your biggest data challenge?",
+      "challengeOptions": {
+        "manual": "Manual reporting processes",
+        "scattered": "Data scattered across departments",
+        "compliance": "Compliance/audit preparation",
+        "other": "Other"
+      },
+      "submit": "Schedule Consultation",
+      "submitting": "Submitting...",
+      "success": "Thank you! We'll be in touch within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    }
+  }
+}

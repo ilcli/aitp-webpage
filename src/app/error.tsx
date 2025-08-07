@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -39,12 +40,12 @@ export default function Error({
             </button>
 
             <div className="text-center">
-              <a
+              <Link
                 href="/"
                 className="text-primary-600 transition-colors hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
               >
                 Go back to homepage
-              </a>
+              </Link>
             </div>
           </div>
 

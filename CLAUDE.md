@@ -2,6 +2,18 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Workflow Instructions
+
+When working on any task in this repository, follow these steps:
+
+1. **First think through the problem** - Read the codebase for relevant files and write a plan to tasks/todo.md
+2. **Create a todo list** - The plan should have a list of todo items that you can check off as you complete them
+3. **Check in before starting** - Before beginning work, verify the plan with the user
+4. **Work through tasks** - Begin working on the todo items, marking them as complete as you go
+5. **Provide high-level explanations** - At every step, give a high-level explanation of what changes were made
+6. **Keep changes simple** - Make every task and code change as simple as possible. Avoid massive or complex changes. Every change should impact as little code as possible. Everything is about simplicity.
+7. **Review and document** - Finally, add a review section to the todo.md file with a summary of the changes made and any other relevant information
+
 ## Project Overview
 
 This is a landing page project for AITP (AI Training & Process) - a consultancy focused on AI automation and training solutions. The project is designed to be a clean, modern website showcasing services and capturing leads.

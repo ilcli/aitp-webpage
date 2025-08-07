@@ -1,74 +1,39 @@
+import { useTranslations } from 'next-intl';
+import { TypewriterHero } from './typewriter-hero';
+import { DashboardMockup } from './dashboard-mockup';
+
 export function Hero() {
+  const t = useTranslations('hero');
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-background to-accent-50 dark:from-accent-900 dark:via-background dark:to-accent-800">
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 lg:px-8 lg:pb-24 lg:pt-32">
         <div className="text-center">
-          {/* Main Headline */}
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl xl:text-7xl">
-            <span className="text-balance">
-              Turn Ideas into{" "}
-              <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
-                AI Systems
-              </span>{" "}
-              That Work
-            </span>
-          </h1>
+          {/* Main Headline with Typewriter Effect */}
+          <TypewriterHero />
 
           {/* Subheading */}
           <p className="mx-auto mb-8 max-w-3xl text-balance text-xl text-accent-600 dark:text-accent-400 sm:text-2xl">
-            We co-build automation and training solutions that save time and
-            scale impact.
+            {t('subheading')}
           </p>
 
           {/* CTA Button */}
           <div className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="https://calendly.com/elifishbakh/30min"
+              href="https://calendly.com/synqer-ai/consultation"
               className="btn-primary transform px-10 py-4 text-lg font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl sm:px-12 sm:py-5"
             >
-              🚀 Book a Free Strategy Call
+              {t('cta.primary')}
             </a>
             <a
               href="#services"
               className="btn-outline px-8 py-4 text-lg font-medium transition-all duration-300 hover:shadow-lg sm:px-10 sm:py-4"
             >
-              Learn More
+              {t('cta.secondary')}
             </a>
           </div>
 
-          {/* Optional AI Prompt Box */}
-          <div className="mx-auto max-w-2xl">
-            <div className="rounded-2xl border border-accent-200 bg-white/50 p-6 shadow-soft backdrop-blur-sm dark:border-accent-700 dark:bg-accent-800/50">
-              <div className="mb-4 flex items-center">
-                <div className="mr-2 h-3 w-3 rounded-full bg-red-400"></div>
-                <div className="mr-2 h-3 w-3 rounded-full bg-yellow-400"></div>
-                <div className="mr-2 h-3 w-3 rounded-full bg-green-400"></div>
-                <span className="ml-2 text-sm text-accent-500 dark:text-accent-400">
-                  AI System Builder
-                </span>
-              </div>
-              <div className="text-left">
-                <div className="flex items-start space-x-3">
-                  <span className="font-mono text-sm text-primary-600">
-                    &gt;
-                  </span>
-                  <div className="flex-1">
-                    <p className="font-mono text-sm text-accent-700 dark:text-accent-300">
-                      &quot;Build me a system that automatically handles
-                      customer support tickets and trains my team on AI
-                      tools&quot;
-                    </p>
-                    <div className="mt-2 flex items-center">
-                      <div className="mr-2 h-2 w-2 animate-pulse rounded-full bg-primary-600"></div>
-                      <span className="text-xs text-accent-500 dark:text-accent-400">
-                        Processing your requirements...
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Municipal Dashboard Mockup */}
+          <DashboardMockup />
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -63,12 +64,12 @@ export default function Services() {
                   Custom AI integrations
                 </li>
               </ul>
-              <a
+              <Link
                 href="/contact"
                 className="btn-primary block w-full text-center"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
 
             {/* Training & Change */}
@@ -109,12 +110,12 @@ export default function Services() {
                   Ongoing mentorship
                 </li>
               </ul>
-              <a
+              <Link
                 href="/contact"
                 className="btn-primary block w-full text-center"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
 
             {/* No-Code Systems */}
@@ -155,12 +156,12 @@ export default function Services() {
                   API integrations
                 </li>
               </ul>
-              <a
+              <Link
                 href="/contact"
                 className="btn-primary block w-full text-center"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -235,9 +236,9 @@ export default function Services() {
             Let&apos;s discuss which service would be the best fit for your
             team.
           </p>
-          <a href="/contact" className="btn-primary inline-block">
+          <Link href="/contact" className="btn-primary inline-block">
             Schedule a Consultation
-          </a>
+          </Link>
         </div>
       </section>
 

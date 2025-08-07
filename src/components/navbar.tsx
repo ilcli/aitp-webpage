@@ -1,13 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTranslations } from 'next-intl';
 import { ThemeToggle } from "./theme-toggle";
+import { LanguageToggle } from "./language-toggle";
 import { useState } from "react";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations('nav');
 
   const isActive = (path: string) => pathname === path;
 
@@ -18,11 +22,15 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600">
-                <span className="text-sm font-bold text-white">AI</span>
-              </div>
+              <Image 
+                src="/logo.svg" 
+                alt="Synqer.ai" 
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <span className="ml-2 text-xl font-bold text-foreground">
-                AITP
+                Synqer.ai
               </span>
             </Link>
           </div>
@@ -38,7 +46,7 @@ export function Navbar() {
                     : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
                 }`}
               >
-                Services
+                {t('services')}
               </Link>
               <Link
                 href="/about"
@@ -48,7 +56,7 @@ export function Navbar() {
                     : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
                 }`}
               >
-                About
+                {t('about')}
               </Link>
               <Link
                 href="/contact"
@@ -58,24 +66,26 @@ export function Navbar() {
                     : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
                 }`}
               >
-                Contact
+                {t('contact')}
               </Link>
             </div>
           </div>
 
-          {/* Right side - CTA and Theme Toggle */}
+          {/* Right side - Language Toggle, Theme Toggle, and CTA */}
           <div className="hidden items-center space-x-4 md:flex">
+            <LanguageToggle />
             <ThemeToggle />
             <a
-              href="https://calendly.com/elifishbakh/30min"
+              href="https://calendly.com/synqer-ai/consultation"
               className="btn-primary"
             >
-              Let&rsquo;s Talk
+              {t('cta')}
             </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="flex items-center space-x-2 md:hidden">
+            <LanguageToggle />
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -134,7 +144,7 @@ export function Navbar() {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Services
+              {t('services')}
             </Link>
             <Link
               href="/about"
@@ -145,7 +155,7 @@ export function Navbar() {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              About
+              {t('about')}
             </Link>
             <Link
               href="/contact"
@@ -156,15 +166,15 @@ export function Navbar() {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              {t('contact')}
             </Link>
             <div className="pt-2">
               <a
-                href="https://calendly.com/elifishbakh/30min"
+                href="https://calendly.com/synqer-ai/consultation"
                 className="btn-primary w-full"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Let&rsquo;s Talk
+                {t('cta')}
               </a>
             </div>
           </div>

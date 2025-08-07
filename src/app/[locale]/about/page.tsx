@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -131,9 +132,9 @@ export default function About() {
             Let&apos;s discuss how we can help turn your ideas into working AI
             systems.
           </p>
-          <a href="/contact" className="btn-primary inline-block">
+          <Link href="/contact" className="btn-primary inline-block">
             Get Started
-          </a>
+          </Link>
         </div>
       </section>
 

@@ -7,7 +7,15 @@
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
       "Bash(npm run lint)",
-      "Bash(npx husky:*)"
+      "Bash(npx husky:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm audit:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(find:*)",
+      "Bash(git clean:*)"
     ],
     "deny": []
   }
