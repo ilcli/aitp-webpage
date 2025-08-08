@@ -3,6 +3,7 @@
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState, useTransition } from 'react';
+import { locales } from '@/i18n/config';
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -19,11 +20,17 @@ export function LanguageToggle() {
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
 
   const switchLanguage = (newLocale: string) => {
+    if (!locales.includes(newLocale as any)) return;
+    
     startTransition(() => {
-      const segments = pathname.split('/');
-      segments[1] = newLocale;
-      const newPathname = segments.join('/');
-      router.push(newPathname);
+      // Get the pathname without the locale prefix
+      const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+      
+      // Construct new path with new locale
+      const newPath = `/${newLocale}${pathWithoutLocale}`;
+      
+      router.push(newPath);
+      router.refresh();
       setIsOpen(false);
     });
   };

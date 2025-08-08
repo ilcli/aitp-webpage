@@ -8,16 +8,16 @@
   "hero": {
     "headline": "Transform",
     "typewriter": {
-      "words": ["Outdated Systems", "Manual Processes", "Data Chaos", "Bureaucracy"]
+      "words": ["Legacy Systems", "Manual Workflows", "Data Silos", "Complex Processes"]
     },
-    "subtitle": "into Smart Municipal Solutions",
-    "subheading": "Reduce manual data entry by 80-90%. Accelerate report generation from weeks to hours. Improve decision accuracy with real-time analytics.",
+    "subtitle": "into Smart Business Solutions",
+    "subheading": "Automate complex processes. Accelerate decision-making. Transform your organization with intelligent automation.",
     "cta": {
       "primary": "Schedule Consultation",
       "secondary": "View Demo"
     },
     "dashboard": {
-      "title": "Municipal Command Center",
+      "title": "Operations Command Center",
       "metric1": "Manual Tasks Reduced",
       "metric1Value": "87%",
       "metric2": "Report Generation",
@@ -28,31 +28,31 @@
     }
   },
   "socialProof": {
-    "title": "Trusted by Leading Municipalities",
-    "subtitle": "Empowering local governments with smart data solutions"
+    "title": "Trusted by Leading Organizations",
+    "subtitle": "Empowering enterprises and institutions with intelligent automation"
   },
   "features": {
-    "title": "Transform Your Municipal Operations",
-    "subtitle": "Proven solutions that deliver measurable results",
+    "title": "Transform Your Business Operations",
+    "subtitle": "Enterprise-grade solutions that deliver measurable impact",
     "card1": {
       "title": "Automated Data Processing",
-      "description": "Eliminate 80-90% of manual data entry. Our AI systems process permits, licenses, and citizen requests automatically, freeing your staff for meaningful work."
+      "description": "Eliminate 80-90% of manual data entry. Our AI systems process documents, applications, and requests automatically, freeing your team for strategic initiatives."
     },
     "card2": {
       "title": "Instant Report Generation",
-      "description": "Generate compliance reports, budget analyses, and performance metrics in hours instead of weeks. Real-time dashboards for informed decision-making."
+      "description": "Generate reports, analyses, and performance metrics in hours instead of weeks. Real-time dashboards for data-driven decision-making."
     },
     "card3": {
       "title": "Regulatory Compliance",
-      "description": "Stay compliant automatically. Our systems track regulatory changes and ensure your processes meet all municipal, state, and federal requirements."
+      "description": "Stay compliant automatically. Our systems track regulatory changes and ensure your processes meet all industry and government requirements."
     },
     "card4": {
-      "title": "Citizen Service Portal",
-      "description": "Modern self-service portals reduce call volume by 60%. Citizens can track requests, submit applications, and access services 24/7."
+      "title": "Customer Service Portal",
+      "description": "Modern self-service portals reduce support volume by 60%. Users can track requests, submit applications, and access services 24/7."
     },
     "card5": {
-      "title": "Department Integration",
-      "description": "Break down data silos. Connect planning, finance, public works, and emergency services with unified data platforms."
+      "title": "System Integration",
+      "description": "Break down data silos. Connect all departments and systems with unified data platforms for seamless operations."
     },
     "card6": {
       "title": "Staff Training & Support",
@@ -60,14 +60,14 @@
     }
   },
   "cta": {
-    "title": "Ready to Modernize Your Municipality?",
-    "subtitle": "Join forward-thinking local governments already transforming their operations",
+    "title": "Ready to Transform Your Operations?",
+    "subtitle": "Join forward-thinking organizations already automating their workflows",
     "button": "Get Your Free Assessment",
-    "testimonial": "Synqer.ai reduced our permit processing time by 75% and improved citizen satisfaction scores dramatically.",
-    "author": "Deputy City Manager"
+    "testimonial": "Synqer.ai reduced our processing time by 75% and improved customer satisfaction scores dramatically.",
+    "author": "Operations Director"
   },
   "footer": {
-    "tagline": "Smart Solutions for Modern Municipalities",
+    "tagline": "Intelligent Automation for Modern Organizations",
     "contact": {
       "title": "Contact",
       "email": "hello@synqer.ai",
@@ -82,18 +82,18 @@
     "copyright": "© 2024 Synqer.ai. All rights reserved."
   },
   "contact": {
-    "title": "Let's Transform Your Municipality",
-    "subtitle": "Schedule a consultation to see how we can help modernize your operations",
+    "title": "Let's Transform Your Organization",
+    "subtitle": "Schedule a consultation to discover how automation can revolutionize your operations",
     "form": {
       "name": "Name",
       "email": "Email",
-      "organization": "Municipality/Organization",
+      "organization": "Organization",
       "challenge": "What's your biggest data challenge?",
       "challengeOptions": {
-        "manual": "Manual reporting processes",
-        "scattered": "Data scattered across departments",
-        "compliance": "Compliance/audit preparation",
-        "other": "Other"
+        "manual": "Manual processes and workflows",
+        "scattered": "Data scattered across systems",
+        "compliance": "Compliance and reporting",
+        "other": "Other challenges"
       },
       "submit": "Schedule Consultation",
       "submitting": "Submitting...",

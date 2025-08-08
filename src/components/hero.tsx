@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { TypewriterHero } from './typewriter-hero';
+import { AnimatedText } from './animated-text';
 import { DashboardMockup } from './dashboard-mockup';
 
 export function Hero() {
@@ -8,8 +8,8 @@ export function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-background to-accent-50 dark:from-accent-900 dark:via-background dark:to-accent-800">
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 lg:px-8 lg:pb-24 lg:pt-32">
         <div className="text-center">
-          {/* Main Headline with Typewriter Effect */}
-          <TypewriterHero />
+          {/* Main Headline with Animated Text Effect */}
+          <AnimatedText />
 
           {/* Subheading */}
           <p className="mx-auto mb-8 max-w-3xl text-balance text-xl text-accent-600 dark:text-accent-400 sm:text-2xl">
