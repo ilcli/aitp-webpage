@@ -60,6 +60,15 @@ const config: Config = {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         heading: ["Inter", "system-ui", "sans-serif"],
+        hebrew: [
+          "Inter",
+          "Noto Sans Hebrew", 
+          "Arial Hebrew", 
+          "Tahoma", 
+          "David", 
+          "system-ui", 
+          "sans-serif"
+        ],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],

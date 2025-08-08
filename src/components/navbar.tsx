@@ -21,63 +21,68 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <Image 
-                src="/logo.svg" 
-                alt="Synqer.ai" 
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-              <span className="ml-2 text-xl font-bold text-foreground">
-                Synqer.ai
+            <Link href="/" className="flex items-center group">
+              <div className="relative">
+                <Image 
+                  src="/logo.svg" 
+                  alt="Synqer.ai - Intelligent Business Automation" 
+                  width={40}
+                  height={40}
+                  className="transition-transform duration-200 group-hover:scale-105"
+                  priority
+                />
+              </div>
+              <span className="ml-3 text-xl font-bold text-foreground transition-colors duration-200 group-hover:text-primary-600">
+                Synqer
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <Link
-                href="/services"
-                className={`nav-link transition-colors ${
-                  isActive("/services")
-                    ? "font-medium text-primary-600 dark:text-primary-400"
-                    : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
-                }`}
-              >
-                {t('services')}
-              </Link>
-              <Link
-                href="/about"
-                className={`nav-link transition-colors ${
-                  isActive("/about")
-                    ? "font-medium text-primary-600 dark:text-primary-400"
-                    : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
-                }`}
-              >
-                {t('about')}
-              </Link>
-              <Link
-                href="/contact"
-                className={`nav-link transition-colors ${
-                  isActive("/contact")
-                    ? "font-medium text-primary-600 dark:text-primary-400"
-                    : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
-                }`}
-              >
-                {t('contact')}
-              </Link>
+          <div className="hidden md:block flex-1">
+            <div className="flex items-center justify-center">
+              <div className="flex items-baseline space-x-6 lg:space-x-8">
+                <Link
+                  href="/services"
+                  className={`nav-link transition-colors font-medium ${
+                    isActive("/services")
+                      ? "text-primary-600 dark:text-primary-400"
+                      : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+                  }`}
+                >
+                  {t('services')}
+                </Link>
+                <Link
+                  href="/about"
+                  className={`nav-link transition-colors font-medium ${
+                    isActive("/about")
+                      ? "text-primary-600 dark:text-primary-400"
+                      : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+                  }`}
+                >
+                  {t('about')}
+                </Link>
+                <Link
+                  href="/contact"
+                  className={`nav-link transition-colors font-medium ${
+                    isActive("/contact")
+                      ? "text-primary-600 dark:text-primary-400"
+                      : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
+                  }`}
+                >
+                  {t('contact')}
+                </Link>
+              </div>
             </div>
           </div>
 
           {/* Right side - Language Toggle, Theme Toggle, and CTA */}
-          <div className="hidden items-center space-x-4 md:flex">
+          <div className="hidden items-center space-x-3 md:flex">
             <LanguageToggle />
             <ThemeToggle />
             <a
               href="https://calendly.com/synqer-ai/consultation"
-              className="btn-primary"
+              className="btn-primary ml-2"
             >
               {t('cta')}
             </a>
