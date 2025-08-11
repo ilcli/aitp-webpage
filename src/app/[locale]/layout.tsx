@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description: "Transform outdated municipal systems into smart, automated solutions. Reduce manual work by 80-90% and accelerate report generation.",
   keywords: "municipal automation, government AI, smart city, data processing, compliance, reporting",
   authors: [{ name: "Synqer.ai" }],
+  icons: {
+    icon: "/synqr-ai-favicon-v1.svg",
+    shortcut: "/synqr-ai-favicon-v1.svg",
+    apple: "/synqr-ai-favicon-v1.svg",
+  },
   openGraph: {
     title: "Synqer.ai - Smart Municipal Solutions",
     description: "Transform outdated municipal systems into smart, automated solutions.",
