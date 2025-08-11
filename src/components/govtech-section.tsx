@@ -1,10 +1,9 @@
 "use client";
-
-import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
+import { useLocale } from 'next-intl';
 import { CheckCircleIcon, TrophyIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 
 export function GovTechSection() {
-  const t = useTranslations();
   const locale = useLocale();
   const isHebrew = locale === 'he';
 
@@ -169,33 +168,22 @@ export function GovTechSection() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-primary-600 to-accent-500 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              {isHebrew ? 'הצטרף למהפכת הGovTech' : 'Join the GovTech Revolution'}
-            </h3>
-            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              {isHebrew 
-                ? 'הזדמנות מימון של 100 מיליון ₪ זמינה עכשיו. הצטרף לארגונים חדשניים שכבר מיישמים אוטומציה חכמה.'
-                : 'NIS 100 million funding opportunity available now. Join innovative organizations already implementing smart automation.'
-              }
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:govtech@synqer.ai"
-                className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-accent-50 transition-colors"
-              >
-                {isHebrew ? 'צור קשר למימון' : 'Contact for Funding'}
-              </a>
-              <a
-                href="/he/contact"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
-              >
-                {isHebrew ? 'קבל הערכה חינם' : 'Get Free Assessment'}
-              </a>
-            </div>
-          </div>
-        </div>
+<div className="text-center mt-12">
+  <div className="bg-gradient-to-r from-primary-600 to-accent-500 rounded-2xl p-8 text-white">
+    <h3 className="text-2xl font-bold mb-4">
+      {isHebrew ? 'הצטרף למהפכת הGovTech' : 'Join the GovTech Revolution'}
+    </h3>
+    <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+      {isHebrew ? 'בואו נשנה יחד את עתיד השירותים הציבוריים' : 'Let\'s transform the future of public services together'}
+    </p>
+    <Link 
+      href={`/${locale}/contact/`}
+      className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
+    >
+      {isHebrew ? 'קבל הערכה חינם' : 'Get Free Assessment'}
+    </Link>
+  </div>
+</div>
       </div>
     </section>
   );
