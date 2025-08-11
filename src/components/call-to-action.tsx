@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export function CallToAction() {
   const t = useTranslations('cta');
+  const locale = useLocale();
   return (
     <section className="bg-gradient-to-r from-primary-600 to-primary-700 py-24 dark:from-primary-800 dark:to-primary-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -62,10 +63,10 @@ export function CallToAction() {
                 {t('button')}
               </a>
               <Link
-                href="/about"
+                href={`/${locale}/about`}
                 className="btn inline-block w-full border-2 border-white text-center text-white hover:bg-white hover:text-primary-600 sm:w-auto"
               >
-                Learn Our Process
+                {t('button_secondary') || 'Learn Our Process'}
               </Link>
             </div>
 

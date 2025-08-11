@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { ThemeToggle } from "./theme-toggle";
 
 export function Footer() {
   const pathname = usePathname();
+  const locale = useLocale();
+  const t = useTranslations('footer');
   const isActive = (path: string) => pathname === path;
 
   return (
@@ -19,13 +22,13 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-4 flex items-center">
               <img 
-                src="/synqer-logo.svg" 
+                src="/favicon.svg" 
                 alt="Synqer.ai - Smart Municipal Solutions" 
                 className="h-10 w-auto"
               />
             </div>
             <p className="mb-6 max-w-md text-accent-600 dark:text-accent-400">
-              Smart municipal solutions that transform outdated systems into automated, efficient operations. Reducing manual work by 80-90%.
+              {t('tagline')}
             </p>
             <div className="flex items-center space-x-4">
               <ThemeToggle />
@@ -38,7 +41,7 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="mb-4 text-lg font-semibold text-foreground">
-              Get In Touch
+              {t('contact.title')}
             </h3>
             <div className="space-y-3">
               <a
@@ -85,9 +88,9 @@ export function Footer() {
             </h3>
             <div className="space-y-3">
               <Link
-                href="/services"
+                href={`/${locale}/services`}
                 className={`block transition-colors ${
-                  isActive("/services")
+                  isActive(`/${locale}/services`)
                     ? "font-medium text-primary-600 dark:text-primary-400"
                     : "text-accent-600 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
                 }`}
@@ -95,9 +98,9 @@ export function Footer() {
                 Services
               </Link>
               <Link
-                href="/about"
+                href={`/${locale}/about`}
                 className={`block transition-colors ${
-                  isActive("/about")
+                  isActive(`/${locale}/about`)
                     ? "font-medium text-primary-600 dark:text-primary-400"
                     : "text-accent-600 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
                 }`}
@@ -105,9 +108,9 @@ export function Footer() {
                 About
               </Link>
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className={`block transition-colors ${
-                  isActive("/contact")
+                  isActive(`/${locale}/contact`)
                     ? "font-medium text-primary-600 dark:text-primary-400"
                     : "text-accent-600 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
                 }`}
@@ -171,29 +174,29 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 flex flex-col items-center justify-between border-t border-accent-200 pt-8 dark:border-accent-800 sm:flex-row">
           <p className="text-sm text-accent-500 dark:text-accent-400">
-            © 2025 Synqer.ai – Smart Municipal Automation
+            {t('copyright')}
           </p>
           <div className="mt-4 flex flex-wrap gap-4 sm:mt-0">
             <Link
-              href="/privacy"
+              href={`/${locale}/privacy`}
               className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
             >
-              Privacy Policy
+              {t('links.privacy')}
             </Link>
             <Link
-              href="/terms"
+              href={`/${locale}/terms`}
               className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
             >
-              Terms of Service
+              {t('links.terms')}
             </Link>
             <Link
-              href="/cookies"
+              href={`/${locale}/cookies`}
               className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
             >
               Cookie Policy
             </Link>
             <Link
-              href="/accessibility"
+              href={`/${locale}/accessibility`}
               className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
             >
               Accessibility

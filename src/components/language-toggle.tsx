@@ -48,13 +48,13 @@ export function LanguageToggle() {
     <button
       onClick={toggleLanguage}
       disabled={isPending}
-      className="group relative flex items-center justify-center w-10 h-10 rounded-full bg-background hover:bg-accent-50 dark:hover:bg-accent-800 transition-all duration-200 border border-accent-200 dark:border-accent-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 shadow-sm hover:shadow-md"
+      className="rounded-full bg-accent-100 p-2 transition-all duration-200 hover:scale-110 hover:bg-accent-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 active:scale-95 dark:bg-accent-800 dark:hover:bg-accent-700"
       title={`Switch to ${otherLanguage.name}`}
       aria-label={`Switch language to ${otherLanguage.name}`}
     >
       {/* Current Language Flag */}
       <span 
-        className={`text-lg transition-transform duration-300 ${isPending ? 'scale-90 opacity-50' : 'group-hover:scale-110'}`}
+        className={`text-base transition-transform duration-300 ${isPending ? 'scale-90 opacity-50' : ''}`}
         role="img"
         aria-hidden="true"
       >
@@ -67,14 +67,6 @@ export function LanguageToggle() {
           <div className="w-3 h-3 border-2 border-primary-600 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
-
-      {/* Subtle hover indicator showing next language */}
-      <span 
-        className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-foreground bg-background border border-accent-200 dark:border-accent-700 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10"
-        role="tooltip"
-      >
-        {otherLanguage.name} {otherLanguage.flag}
-      </span>
     </button>
   );
 }

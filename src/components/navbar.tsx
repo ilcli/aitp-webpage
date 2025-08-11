@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { ThemeToggle } from "./theme-toggle";
 import { LanguageToggle } from "./language-toggle";
 import { useState } from "react";
@@ -11,6 +11,7 @@ import { useState } from "react";
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const locale = useLocale();
   const t = useTranslations('nav');
 
   const isActive = (path: string) => pathname === path;
@@ -21,10 +22,10 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center group">
+            <Link href={`/${locale}`} className="flex items-center group">
               <div className="relative">
                 <Image 
-                  src="/synqer-logo.svg" 
+                  src="/favicon.svg" 
                   alt="Synqer.ai - Smart Municipal Solutions" 
                   width={120}
                   height={40}
@@ -40,9 +41,9 @@ export function Navbar() {
             <div className="flex items-center justify-center">
               <div className="flex items-baseline space-x-6 lg:space-x-8">
                 <Link
-                  href="/services"
+                  href={`/${locale}/services`}
                   className={`nav-link transition-colors font-medium ${
-                    isActive("/services")
+                    isActive(`/${locale}/services`)
                       ? "text-primary-600 dark:text-primary-400"
                       : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
                   }`}
@@ -50,9 +51,9 @@ export function Navbar() {
                   {t('services')}
                 </Link>
                 <Link
-                  href="/about"
+                  href={`/${locale}/about`}
                   className={`nav-link transition-colors font-medium ${
-                    isActive("/about")
+                    isActive(`/${locale}/about`)
                       ? "text-primary-600 dark:text-primary-400"
                       : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
                   }`}
@@ -60,9 +61,9 @@ export function Navbar() {
                   {t('about')}
                 </Link>
                 <Link
-                  href="/contact"
+                  href={`/${locale}/contact`}
                   className={`nav-link transition-colors font-medium ${
-                    isActive("/contact")
+                    isActive(`/${locale}/contact`)
                       ? "text-primary-600 dark:text-primary-400"
                       : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
                   }`}
@@ -138,9 +139,9 @@ export function Navbar() {
         <div className="md:hidden">
           <div className="space-y-1 border-b border-accent-200 bg-background px-2 pb-3 pt-2 dark:border-accent-800 sm:px-3">
             <Link
-              href="/services"
+              href={`/${locale}/services`}
               className={`block px-3 py-2 text-base font-medium transition-colors ${
-                isActive("/services")
+                isActive(`/${locale}/services`)
                   ? "font-semibold text-primary-600 dark:text-primary-400"
                   : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
               }`}
@@ -149,9 +150,9 @@ export function Navbar() {
               {t('services')}
             </Link>
             <Link
-              href="/about"
+              href={`/${locale}/about`}
               className={`block px-3 py-2 text-base font-medium transition-colors ${
-                isActive("/about")
+                isActive(`/${locale}/about`)
                   ? "font-semibold text-primary-600 dark:text-primary-400"
                   : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
               }`}
@@ -160,9 +161,9 @@ export function Navbar() {
               {t('about')}
             </Link>
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className={`block px-3 py-2 text-base font-medium transition-colors ${
-                isActive("/contact")
+                isActive(`/${locale}/contact`)
                   ? "font-semibold text-primary-600 dark:text-primary-400"
                   : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
               }`}
