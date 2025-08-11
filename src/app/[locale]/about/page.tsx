@@ -12,11 +12,11 @@ export default function About() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              About AITP
+              About Synqer.ai
             </h1>
             <p className="mt-6 text-lg leading-8 text-accent-600 dark:text-accent-400">
-              We&apos;re a consultancy focused on turning your ideas into AI
-              systems that actually work.
+              We specialize in smart automation solutions that transform municipal
+              operations and reduce manual work by 80-90%.
             </p>
           </div>
         </div>
@@ -31,9 +31,9 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="mb-4 text-accent-700 dark:text-accent-300">
-                At AITP, we believe AI should solve real problems, not create
-                new complexities. We co-build automation and training solutions
-                that save time, reduce errors, and scale your impact.
+                At Synqer.ai, we believe automation should solve real municipal problems, not create
+                new complexities. We build smart systems that transform outdated processes
+                into efficient, automated operations.
               </p>
               <p className="text-accent-700 dark:text-accent-300">
                 Our approach is hands-on, practical, and focused on delivering

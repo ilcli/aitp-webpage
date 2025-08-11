@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Complete AITP landing page implementation
+- Complete Synqer.ai landing page implementation
 - Comprehensive project documentation and README
 - MIT License
 - SEO optimization with meta tags, Open Graph, and Twitter cards

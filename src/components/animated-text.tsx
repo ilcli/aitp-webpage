@@ -51,7 +51,7 @@ export function AnimatedText({ className = "" }: AnimatedTextProps) {
     <h1 className={`mb-6 text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl xl:text-7xl ${className}`}>
       <span className="text-balance">
         {t('headline')}{" "}
-        <span className="inline-block relative h-[1.2em] min-w-[200px] sm:min-w-[250px] lg:min-w-[300px]">
+        <span className="inline-block relative h-[1.2em] min-w-[280px] sm:min-w-[350px] lg:min-w-[400px]">
           <AnimatePresence mode="wait">
             <motion.span
               key={currentIndex}

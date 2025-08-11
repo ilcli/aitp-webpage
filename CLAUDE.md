@@ -16,7 +16,7 @@ When working on any task in this repository, follow these steps:
 
 ## Project Overview
 
-This is a landing page project for AITP (AI Training & Process) - a consultancy focused on AI automation and training solutions. The project is designed to be a clean, modern website showcasing services and capturing leads.
+This is a landing page project for Synqer.ai - smart automation solutions for municipalities and organizations. The project is designed to be a clean, modern website showcasing services and capturing leads.
 
 ## Tech Stack
 

@@ -57,3 +57,38 @@ temp/
 
 # Optional REPL history
 .node_repl_history
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
+# Additional security files
+*.key
+*.pem
+*.p12
+*.cer
+*.crt
+*.der
+*.pfx
+*.keystore
+secret*
+*secret*
+private*
+*private*
+config.local.*
+.secrets/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Todo files (may contain sensitive notes)
+todo.md
+TODO.md
+notes.md
+NOTES.md

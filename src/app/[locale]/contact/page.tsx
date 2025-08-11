@@ -15,7 +15,7 @@ export default function Contact() {
               Let&apos;s Talk
             </h1>
             <p className="mt-6 text-lg leading-8 text-accent-600 dark:text-accent-400">
-              Ready to turn your ideas into working AI systems? We&apos;d love
+              Ready to transform your municipal operations with smart automation? We&apos;d love
               to hear from you.
             </p>
           </div>
@@ -60,10 +60,10 @@ export default function Contact() {
                       />
                     </svg>
                     <a
-                      href="mailto:hello@aitp.agency"
+                      href="mailto:hello@synqer.ai"
                       className="transition-colors hover:text-primary-600 dark:hover:text-primary-400"
                     >
-                      hello@aitp.agency
+                      hello@synqer.ai
                     </a>
                   </div>
                   <p className="mt-2 text-sm text-accent-500 dark:text-accent-400">
@@ -84,12 +84,12 @@ export default function Contact() {
                       <path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm5.568 8.16c-.169 1.858-.896 6.728-.896 6.728-.302 1.578-.886 1.863-1.461 1.863-.678 0-.97-.447-1.687-1.085-.509-.453-2.267-1.613-2.267-1.613s-.38-.283-.38-.896c0-.612.38-.896.653-1.169.274-.274 4.503-4.503 4.503-4.503s.274-.274.274-.612c0-.339-.274-.613-.548-.613-.273 0-.547.274-4.503 4.503-.339.339-.678.339-1.017.339s-.678 0-1.017-.339c0 0-2.267-1.613-2.267-1.613-.717-.638-1.009-1.085-1.687-1.085-.575 0-1.159.285-1.461 1.863 0 0-.727 4.87-.896 6.728C5.168 15.238 5.168 16 6.5 16s2.832-1.762 2.832-1.762c.612-.453 1.491-1.085 2.668-1.935 1.177.85 2.056 1.482 2.668 1.935 0 0 1.5 1.762 2.832 1.762s1.332-.762 0-2.84z" />
                     </svg>
                     <a
-                      href="https://t.me/aitpagency"
+                      href="https://t.me/synqerai"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-colors hover:text-primary-600 dark:hover:text-primary-400"
                     >
-                      @aitpagency
+                      @synqerai
                     </a>
                   </div>
                   <p className="mt-2 text-sm text-accent-500 dark:text-accent-400">
@@ -146,8 +146,8 @@ export default function Contact() {
                 How long does a typical project take?
               </h3>
               <p className="text-sm text-accent-600 dark:text-accent-400">
-                Most automation projects take 2-6 weeks, depending on
-                complexity. Training programs are typically 1-2 weeks.
+                Most municipal automation projects take 4-8 weeks, depending on
+                complexity and integration requirements.
               </p>
             </div>
             <div>
@@ -155,8 +155,8 @@ export default function Contact() {
                 Do you work with small teams?
               </h3>
               <p className="text-sm text-accent-600 dark:text-accent-400">
-                Absolutely! We work with teams of all sizes, from solo
-                entrepreneurs to large enterprises.
+                Absolutely! We work with municipalities of all sizes, from small
+                cities to large metropolitan areas.
               </p>
             </div>
             <div>

@@ -1,6 +1,6 @@
-# AITP - AI Training & Process
+# Synqer.ai - Smart Municipal Solutions
 
-A modern Next.js landing page for AITP, a consultancy focused on AI automation and training solutions.
+A modern Next.js landing page for Synqer.ai, smart automation solutions for municipalities and organizations.
 
 ## 🚀 Getting Started
 

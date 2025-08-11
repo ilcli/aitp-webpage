@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { SocialProof } from "@/components/social-proof";
 import { Features } from "@/components/features";
+import { GovTechSection } from "@/components/govtech-section";
 import { CallToAction } from "@/components/call-to-action";
 import { Footer } from "@/components/footer";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <SocialProof />
       <Features />
+      <GovTechSection />
       <CallToAction />
       <Footer />
     </main>

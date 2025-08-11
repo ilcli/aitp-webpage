@@ -24,17 +24,14 @@ export function Navbar() {
             <Link href="/" className="flex items-center group">
               <div className="relative">
                 <Image 
-                  src="/logo.svg" 
-                  alt="Synqer.ai - Intelligent Business Automation" 
-                  width={40}
+                  src="/synqer-logo.svg" 
+                  alt="Synqer.ai - Smart Municipal Solutions" 
+                  width={120}
                   height={40}
                   className="transition-transform duration-200 group-hover:scale-105"
                   priority
                 />
               </div>
-              <span className="ml-3 text-xl font-bold text-foreground transition-colors duration-200 group-hover:text-primary-600">
-                Synqer
-              </span>
             </Link>
           </div>
 
@@ -77,19 +74,19 @@ export function Navbar() {
           </div>
 
           {/* Right side - Language Toggle, Theme Toggle, and CTA */}
-          <div className="hidden items-center space-x-3 md:flex">
+          <div className="hidden items-center space-x-4 md:flex">
             <LanguageToggle />
             <ThemeToggle />
             <a
               href="https://calendly.com/synqer-ai/consultation"
-              className="btn-primary ml-2"
+              className="btn-primary ml-4"
             >
               {t('cta')}
             </a>
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex items-center space-x-2 md:hidden">
+          <div className="flex items-center space-x-3 md:hidden">
             <LanguageToggle />
             <ThemeToggle />
             <button

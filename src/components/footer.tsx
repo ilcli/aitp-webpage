@@ -18,16 +18,14 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-4 flex items-center">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600">
-                <span className="text-sm font-bold text-white">AI</span>
-              </div>
-              <span className="ml-2 text-xl font-bold text-foreground">
-                AITP
-              </span>
+              <img 
+                src="/synqer-logo.svg" 
+                alt="Synqer.ai - Smart Municipal Solutions" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="mb-6 max-w-md text-accent-600 dark:text-accent-400">
-              We co-build automation and training solutions that save time and
-              scale impact. Turn your ideas into AI systems that actually work.
+              Smart municipal solutions that transform outdated systems into automated, efficient operations. Reducing manual work by 80-90%.
             </p>
             <div className="flex items-center space-x-4">
               <ThemeToggle />
@@ -44,7 +42,7 @@ export function Footer() {
             </h3>
             <div className="space-y-3">
               <a
-                href="mailto:hello@aitp.agency"
+                href="mailto:hello@synqer.ai"
                 className="flex items-center text-accent-600 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
               >
                 <svg
@@ -60,10 +58,10 @@ export function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                hello@aitp.agency
+                hello@synqer.ai
               </a>
               <a
-                href="https://t.me/aitpagency"
+                href="https://t.me/synqerai"
                 className="flex items-center text-accent-600 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -124,7 +122,7 @@ export function Footer() {
         <div className="mt-8 border-t border-accent-200 pt-8 dark:border-accent-800">
           <div className="flex justify-center space-x-6">
             <a
-              href="https://twitter.com/aitpagency"
+              href="https://twitter.com/synqerai"
               className="transform text-accent-500 transition-colors duration-200 hover:scale-110 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
               target="_blank"
               rel="noopener noreferrer"
@@ -135,7 +133,7 @@ export function Footer() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/company/aitp-agency"
+              href="https://linkedin.com/company/synqer-ai"
               className="transform text-accent-500 transition-colors duration-200 hover:scale-110 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
               target="_blank"
               rel="noopener noreferrer"
@@ -146,7 +144,7 @@ export function Footer() {
               </svg>
             </a>
             <a
-              href="https://github.com/aitp-agency"
+              href="https://github.com/synqer-ai"
               className="transform text-accent-500 transition-colors duration-200 hover:scale-110 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
               target="_blank"
               rel="noopener noreferrer"
@@ -157,7 +155,7 @@ export function Footer() {
               </svg>
             </a>
             <a
-              href="https://t.me/aitpagency"
+              href="https://t.me/synqerai"
               className="transform text-accent-500 transition-colors duration-200 hover:scale-110 hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
               target="_blank"
               rel="noopener noreferrer"
@@ -173,9 +171,9 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 flex flex-col items-center justify-between border-t border-accent-200 pt-8 dark:border-accent-800 sm:flex-row">
           <p className="text-sm text-accent-500 dark:text-accent-400">
-            © 2025 AITP – Built for clarity & action
+            © 2025 Synqer.ai – Smart Municipal Automation
           </p>
-          <div className="mt-4 flex space-x-6 sm:mt-0">
+          <div className="mt-4 flex flex-wrap gap-4 sm:mt-0">
             <Link
               href="/privacy"
               className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
@@ -187,6 +185,18 @@ export function Footer() {
               className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
             >
               Terms of Service
+            </Link>
+            <Link
+              href="/cookies"
+              className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
+            >
+              Cookie Policy
+            </Link>
+            <Link
+              href="/accessibility"
+              className="text-sm text-accent-500 transition-colors hover:text-primary-600 dark:text-accent-400 dark:hover:text-primary-400"
+            >
+              Accessibility
             </Link>
           </div>
         </div>
