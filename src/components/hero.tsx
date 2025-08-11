@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
-import { AnimatedText } from './animated-text';
 import { DashboardMockup } from './dashboard-mockup';
+import { createScheduleUrl } from '@/config/site';
+import { CheckCircleIcon } from '@heroicons/react/24/outline';
 
 export function Hero() {
   const t = useTranslations('hero');
@@ -8,28 +9,58 @@ export function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-background to-accent-50 dark:from-accent-900 dark:via-background dark:to-accent-800">
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 lg:px-8 lg:pb-24 lg:pt-32">
         <div className="text-center">
-          {/* Main Headline with Animated Text Effect */}
-          <AnimatedText />
+          {/* Main Headline - Clear Value Prop */}
+          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            {t('headline')}
+            <span className="block text-primary-600 dark:text-primary-400">
+              {t('subheadline')}
+            </span>
+          </h1>
 
-          {/* Subheading */}
-          <p className="mx-auto mb-8 max-w-3xl text-balance text-xl text-accent-600 dark:text-accent-400 sm:text-2xl">
+          {/* Supporting Text */}
+          <p className="mx-auto mt-6 mb-8 max-w-3xl text-balance text-xl text-accent-600 dark:text-accent-400 sm:text-2xl">
             {t('subheading')}
           </p>
 
-          {/* CTA Button */}
-          <div className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          {/* Benefit Bullets */}
+          <div className="mx-auto mb-10 max-w-3xl">
+            <div className="grid grid-cols-1 gap-4 text-left sm:grid-cols-3">
+              <div className="flex items-start space-x-3">
+                <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-green-500 mt-0.5" />
+                <span className="text-base text-accent-700 dark:text-accent-300">
+                  {t('benefits.1')}
+                </span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-green-500 mt-0.5" />
+                <span className="text-base text-accent-700 dark:text-accent-300">
+                  {t('benefits.2')}
+                </span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-green-500 mt-0.5" />
+                <span className="text-base text-accent-700 dark:text-accent-300">
+                  {t('benefits.3')}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Single Power CTA with Expectation Text */}
+          <div className="mb-12">
             <a
-              href="https://calendly.com/synqer-ai/consultation"
-              className="btn-primary transform px-10 py-4 text-lg font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl sm:px-12 sm:py-5"
+              href={createScheduleUrl('website', 'hero', 'main')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-block transform px-12 py-5 text-xl font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               {t('cta.primary')}
             </a>
-            <a
-              href="#services"
-              className="btn-outline px-8 py-4 text-lg font-medium transition-all duration-300 hover:shadow-lg sm:px-10 sm:py-4"
-            >
-              {t('cta.secondary')}
-            </a>
+            
+            {/* What Happens Next? */}
+            <p className="mt-4 text-sm text-accent-600 dark:text-accent-400 italic">
+              {t('cta.expectation')}
+            </p>
           </div>
 
           {/* Municipal Dashboard Mockup */}

@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
+import { TrustIndicators } from "@/components/trust-indicators";
 import { SocialProof } from "@/components/social-proof";
 import { Features } from "@/components/features";
 import { GovTechSection } from "@/components/govtech-section";
@@ -11,7 +12,7 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      <SocialProof />
+      <TrustIndicators />
       <Features />
       <GovTechSection />
       <CallToAction />

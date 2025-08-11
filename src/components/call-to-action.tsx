@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
+import { createScheduleUrl } from '@/config/site';
 
 export function CallToAction() {
   const t = useTranslations('cta');
@@ -57,7 +58,9 @@ export function CallToAction() {
 
             <div className="space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
               <a
-                href="https://calendly.com/synqer-ai/consultation"
+                href={createScheduleUrl('website', 'cta', 'footer')}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn inline-block w-full bg-white text-center text-primary-600 shadow-soft-lg hover:bg-white/90 sm:w-auto"
               >
                 {t('button')}

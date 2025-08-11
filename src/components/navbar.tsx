@@ -5,8 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from 'next-intl';
 import { ThemeToggle } from "./theme-toggle";
-import { LanguageToggle } from "./language-toggle";
 import { useState } from "react";
+import { createScheduleUrl } from '@/config/site';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,9 +27,9 @@ export function Navbar() {
                 <Image 
                   src="/favicon.svg" 
                   alt="Synqer.ai - Smart Municipal Solutions" 
-                  width={120}
-                  height={40}
-                  className="transition-transform duration-200 group-hover:scale-105"
+                  width={60}
+                  height={20}
+                  className="transition-transform duration-200 group-hover:scale-105 max-h-8 w-auto"
                   priority
                 />
               </div>
@@ -74,12 +74,13 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Right side - Language Toggle, Theme Toggle, and CTA */}
+          {/* Right side - Theme Toggle and CTA */}
           <div className="hidden items-center space-x-4 md:flex">
-            <LanguageToggle />
             <ThemeToggle />
             <a
-              href="https://calendly.com/synqer-ai/consultation"
+              href={createScheduleUrl('website', 'navbar', 'main')}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary ml-4"
             >
               {t('cta')}
@@ -88,7 +89,6 @@ export function Navbar() {
 
           {/* Mobile menu button */}
           <div className="flex items-center space-x-3 md:hidden">
-            <LanguageToggle />
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -173,7 +173,9 @@ export function Navbar() {
             </Link>
             <div className="pt-2">
               <a
-                href="https://calendly.com/synqer-ai/consultation"
+                href={createScheduleUrl('website', 'navbar', 'mobile')}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary w-full"
                 onClick={() => setIsMenuOpen(false)}
               >

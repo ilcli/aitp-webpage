@@ -3,18 +3,25 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "cta": "Schedule Consultation"
+    "cta": "Book 30-Min Demo"
   },
   "hero": {
-    "headline": "Transform",
+    "headline": "Cut reporting time by 70% for your municipal team",
+    "subheadline": "— no IT required",
     "typewriter": {
       "words": ["Legacy Systems", "Manual Workflows", "Data Silos", "Complex Processes"]
     },
     "subtitle": "into Smart Business Solutions",
-    "subheading": "Automate complex processes. Accelerate decision-making. Transform your organization with intelligent automation.",
+    "subheading": "Turn Excel chaos into one-click reports. Automate data entry. Generate compliance documents instantly.",
+    "benefits": {
+      "1": "Automate manual data entry in minutes, not months",
+      "2": "Generate compliance reports with one click",
+      "3": "Save 20+ hours per week on repetitive tasks"
+    },
     "cta": {
-      "primary": "Schedule Consultation",
-      "secondary": "View Demo"
+      "primary": "Book Your 30-Minute Demo",
+      "secondary": "View Demo",
+      "expectation": "In 30 minutes, we'll map your workflows and show exactly where automation can save your budget"
     },
     "dashboard": {
       "title": "Operations Command Center",
@@ -32,40 +39,40 @@
     "subtitle": "Empowering enterprises and institutions with intelligent automation"
   },
   "features": {
-    "title": "Transform Your Business Operations",
-    "subtitle": "Enterprise-grade solutions that deliver measurable impact",
+    "title": "Your Excel Hell, Solved",
+    "subtitle": "Stop copying and pasting. Start automating the work that eats your day.",
     "card1": {
-      "title": "Automated Data Processing",
-      "description": "Eliminate 80-90% of manual data entry. Our AI systems process documents, applications, and requests automatically, freeing your team for strategic initiatives."
+      "title": "Turn Excel Chaos into One-Click Reports",
+      "description": "That weekly report that takes 3 days? Now it's a button. Pull data from all departments, format it perfectly, and send it out — automatically."
     },
     "card2": {
-      "title": "Instant Report Generation",
-      "description": "Generate reports, analyses, and performance metrics in hours instead of weeks. Real-time dashboards for data-driven decision-making."
+      "title": "Stop Manual Data Entry Forever",
+      "description": "No more copying from PDFs to spreadsheets. Our system reads permits, applications, and forms, then fills your databases instantly."
     },
     "card3": {
-      "title": "Regulatory Compliance",
-      "description": "Stay compliant automatically. Our systems track regulatory changes and ensure your processes meet all industry and government requirements."
+      "title": "Never Miss Compliance Deadlines",
+      "description": "Automatic alerts for regulatory reports. Generate state-required documents with current data. No scrambling at month-end."
     },
     "card4": {
-      "title": "Customer Service Portal",
-      "description": "Modern self-service portals reduce support volume by 60%. Users can track requests, submit applications, and access services 24/7."
+      "title": "Give Citizens Self-Service (Finally)",
+      "description": "Let residents check permit status, pay fees, and submit requests online. Your phone stops ringing, their satisfaction goes up."
     },
     "card5": {
-      "title": "System Integration",
-      "description": "Break down data silos. Connect all departments and systems with unified data platforms for seamless operations."
+      "title": "Connect Your Scattered Systems",
+      "description": "Finance uses one system, Planning uses another, HR has three. We make them talk to each other. One source of truth."
     },
     "card6": {
-      "title": "Staff Training & Support",
-      "description": "Comprehensive training ensures smooth adoption. Your team becomes proficient with new systems, maximizing ROI on digital transformation."
+      "title": "Your Team Actually Uses It",
+      "description": "No IT degree required. If they can use email, they can use this. We train everyone and stay until they're comfortable."
     }
   },
   "cta": {
-    "title": "Ready to Transform Your Operations?",
-    "subtitle": "Join forward-thinking organizations already automating their workflows",
-    "button": "Get Your Free Assessment",
+    "title": "Ready to Stop the Manual Madness?",
+    "subtitle": "30 minutes is all it takes to see how much time you'll save",
+    "button": "Book Your 30-Minute Demo",
     "button_secondary": "Learn Our Process",
-    "testimonial": "Synqer.ai reduced our processing time by 75% and improved customer satisfaction scores dramatically.",
-    "author": "Operations Director"
+    "testimonial": "We went from 40 hours of monthly reporting to 2 hours. The ROI was immediate.",
+    "author": "Finance Director, Regional Municipality"
   },
   "footer": {
     "tagline": "Intelligent Automation for Modern Organizations",

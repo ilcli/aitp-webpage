@@ -28,11 +28,11 @@ const config: Config = {
           200: "#99f6e4",
           300: "#5eead4",
           400: "#2dd4bf",
-          500: "#14b8a6",  // Teal - secondary color
-          600: "#0d9488",
+          500: "#00cbd8",  // Cyan - enhanced for dark mode
+          600: "#00a7b0",
           700: "#0f766e",
-          800: "#115e59",
-          900: "#134e4a",
+          800: "#071826",  // Dark surface color
+          900: "#06121a",  // Dark background color
         },
         neutral: {
           50: "#fafafa",
@@ -60,15 +60,6 @@ const config: Config = {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         heading: ["Inter", "system-ui", "sans-serif"],
-        hebrew: [
-          "Inter",
-          "Noto Sans Hebrew", 
-          "Arial Hebrew", 
-          "Tahoma", 
-          "David", 
-          "system-ui", 
-          "sans-serif"
-        ],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],

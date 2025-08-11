@@ -1,9 +1,6 @@
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-## Workflow Instructions
-
 When working on any task in this repository, follow these steps:
 
 1. **First think through the problem** - Read the codebase for relevant files and write a plan to tasks/todo.md
@@ -13,6 +10,10 @@ When working on any task in this repository, follow these steps:
 5. **Provide high-level explanations** - At every step, give a high-level explanation of what changes were made
 6. **Keep changes simple** - Make every task and code change as simple as possible. Avoid massive or complex changes. Every change should impact as little code as possible. Everything is about simplicity.
 7. **Review and document** - Finally, add a review section to the todo.md file with a summary of the changes made and any other relevant information
+
+
+
+
 
 ## Project Overview
 

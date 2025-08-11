@@ -65,8 +65,8 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === 'he' ? 'rtl' : 'ltr'} suppressHydrationWarning>
-      <body className={`antialiased ${locale === 'he' ? 'font-hebrew' : ''}`}>
+    <html lang="en" dir="ltr" suppressHydrationWarning>
+      <body className="antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

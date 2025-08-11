@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { ThemeToggle } from "./theme-toggle";
@@ -21,10 +22,12 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-4 flex items-center">
-              <img 
+              <Image 
                 src="/favicon.svg" 
                 alt="Synqer.ai - Smart Municipal Solutions" 
-                className="h-10 w-auto"
+                width={24}
+                height={24}
+                className="h-6 w-auto"
               />
             </div>
             <p className="mb-6 max-w-md text-accent-600 dark:text-accent-400">
