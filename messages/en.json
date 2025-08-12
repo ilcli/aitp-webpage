@@ -1,0 +1,206 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Book 30-Min Demo"
+  },
+  "hero": {
+    "headline": "Custom-built automations, delivered",
+    "subheadline": "Deployed on your preferred infrastructure",
+    "typewriterPhrases": [
+      "on your terms",
+      "with full security",
+      "with zero waste",
+      "at peak efficiency"
+    ],
+    "typewriter": {
+      "words": [
+        "Legacy Systems",
+        "Manual Workflows",
+        "Data Silos",
+        "Complex Processes"
+      ]
+    },
+    "subtitle": "into Smart Business Solutions",
+    "subheading": "Transform complex manual processes into automated workflows deployed on your chosen infrastructure. Enable 24/7 citizen services through WhatsApp and web portals.",
+    "benefits": {
+      "1": "Automate manual data entry with simple setup",
+      "2": "Generate compliance reports with one click",
+      "3": "Enable 24/7 client services and self-service"
+    },
+    "cta": {
+      "primary": "Book Your 30-Minute Discovery Call",
+      "secondary": "View Demo",
+      "expectation": "In 30 minutes, we'll assess your workflows and design a custom automation solution for your infrastructure"
+    },
+    "dashboard": {
+      "title": "Operations Command Center",
+      "metric1": "Manual Tasks Reduced",
+      "metric1Value": "Significant",
+      "metric2": "Report Generation",
+      "metric2Value": "Automated",
+      "metric3": "Data Accuracy",
+      "metric3Value": "High",
+      "status": "Real-time monitoring active"
+    }
+  },
+  "socialProof": {
+    "title": "Israeli Government Technology Specialists",
+    "subtitle": "Custom solutions deployed on your preferred cloud infrastructure with Hebrew/English support and local compliance expertise"
+  },
+  "services": {
+    "title": "Custom Automation Solutions for Government Organizations",
+    "subtitle": "Deployed on your preferred infrastructure with full client ownership",
+    "processAutomation": {
+      "title": "Custom Workflow Automation",
+      "description": "Bespoke automation solutions deployed on your chosen infrastructure. From Excel chaos to automated reporting systems.",
+      "benefits": {
+        "1": "Custom development tailored to your existing systems and compliance needs",
+        "2": "Deploy on your preferred cloud infrastructure or on-premises environment",
+        "3": "Full ownership and control - no vendor lock-in or ongoing subscriptions"
+      },
+      "cta": "Schedule Discovery Call"
+    },
+    "citizenEngagement": {
+      "title": "WhatsApp Business Integration",
+      "description": "Custom WhatsApp Business API integration deployed on your infrastructure. Enable 24/7 citizen services while maintaining full data control.",
+      "benefits": {
+        "1": "WhatsApp Business API integration with your existing municipal systems",
+        "2": "Deploy on your chosen cloud provider with complete data sovereignty",
+        "3": "Custom automation workflows connecting WhatsApp to your databases"
+      },
+      "cta": "Discuss Integration"
+    },
+    "complianceReporting": {
+      "title": "Compliance Automation Systems",
+      "description": "Custom compliance and reporting solutions built for Israeli regulatory requirements. Deploy on secure infrastructure with complete team training.",
+      "benefits": {
+        "1": "Automated generation of state-required documents and regulatory reports",
+        "2": "Built-in Israeli compliance workflows and deadline management systems",
+        "3": "Comprehensive team training and handover with full system ownership"
+      },
+      "cta": "Explore Solutions"
+    },
+    "bottomCta": {
+      "text": "Ready to discuss a custom automation solution for your organization?",
+      "button": "Book Your 30-Minute Discovery Call"
+    },
+    "hardcoded": {
+      "workflowsInMinutes": "Transform workflows in minutes",
+      "exploreAutomation": "Explore Automation →",
+      "whatsappIntegration": "24/7 WhatsApp & web portals",
+      "whatsappIntegrationPoint": "WhatsApp Integration",
+      "autoResponses": "Auto Responses",
+      "automatedReportsTraining": "Automated reports + training",
+      "deadlineAlerts": "Deadline Alerts",
+      "teamTraining": "Team Training",
+      "seeItInAction": "See It In Action",
+      "watchDemo": "Watch how we transform your workflows",
+      "viewInteractiveDemo": "View Interactive Demo"
+    }
+  },
+  "features": {
+    "title": "Your Excel Hell, Solved",
+    "subtitle": "Stop copying and pasting. Start automating the work that eats your day.",
+    "card1": {
+      "title": "Turn Excel Chaos into One-Click Reports",
+      "description": "Transform weekly reporting from a multi-day process to a single click. Pull data from all departments, format it perfectly, and send it out — automatically."
+    },
+    "card2": {
+      "title": "Stop Manual Data Entry Forever",
+      "description": "Automated data extraction from documents and forms eliminates manual copying from PDFs to spreadsheets. Your databases update instantly."
+    },
+    "card3": {
+      "title": "Never Miss Compliance Deadlines",
+      "description": "Automatic alerts for regulatory reports. Generate state-required documents with current data. No scrambling at month-end."
+    },
+    "card4": {
+      "title": "Enable 24/7 Citizen Services via WhatsApp",
+      "description": "Citizens can check permit status, submit requests, pay fees, and receive updates through WhatsApp and web portals. Automated responses handle common inquiries instantly."
+    },
+    "card5": {
+      "title": "Connect Your Scattered Systems",
+      "description": "Finance uses one system, Planning uses another, HR has three. We make them talk to each other. One source of truth."
+    },
+    "card6": {
+      "title": "Your Team Actually Uses It",
+      "description": "No IT degree required. If they can use email, they can use this. We train everyone and stay until they're comfortable."
+    }
+  },
+  "whatsapp": {
+    "title": "Meet Citizens Where They Are - WhatsApp",
+    "subtitle": "Enable residents to access municipal services 24/7 through their preferred communication channel",
+    "features": {
+      "status": {
+        "title": "Check Status Instantly",
+        "description": "Permit applications, license renewals, and service request updates delivered automatically"
+      },
+      "requests": {
+        "title": "Submit Service Requests",
+        "description": "Report issues, request services, and file complaints with photo attachments and location data"
+      },
+      "updates": {
+        "title": "Receive Automated Notifications",
+        "description": "Payment reminders, deadline alerts, and important municipal announcements"
+      },
+      "access": {
+        "title": "24/7 Information Access",
+        "description": "Office hours, contact information, forms, and frequently asked questions available anytime"
+      }
+    },
+    "integration": {
+      "title": "Seamlessly Integrated with Your Municipal Systems",
+      "description": "WhatsApp communications sync directly with your existing databases and workflows",
+      "features": {
+        "automated": "Automated Responses",
+        "multilingual": "Hebrew/English Support",
+        "secure": "Secure & Private",
+        "compliant": "Government Compliant"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Operations?",
+    "subtitle": "30 minutes to assess your workflows and design your custom automation solution",
+    "button": "Book Your 30-Minute Discovery Call",
+    "button_secondary": "Learn Our Process",
+    "testimonial": "Custom automation solution deployed on our infrastructure transformed our monthly reporting from a multi-day process to automated delivery. Full ownership, no ongoing fees.",
+    "author": "Municipal Finance Department"
+  },
+  "footer": {
+    "tagline": "Custom Automation Solutions for Government Organizations",
+    "contact": {
+      "title": "Contact",
+      "email": "hello@synqer.ai",
+      "phone": "+1 (555) 123-4567"
+    },
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "security": "Security",
+      "compliance": "Compliance"
+    },
+    "copyright": "© 2024 Synqer.ai. All rights reserved."
+  },
+  "contact": {
+    "title": "Let's Design Your Custom Automation Solution",
+    "subtitle": "Schedule a discovery call to assess your workflows and design a tailored solution for your infrastructure",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "organization": "Organization",
+      "challenge": "What's your biggest data challenge?",
+      "challengeOptions": {
+        "manual": "Manual processes and workflows",
+        "scattered": "Data scattered across systems",
+        "compliance": "Compliance and reporting",
+        "other": "Other challenges"
+      },
+      "submit": "Schedule Consultation",
+      "submitting": "Submitting...",
+      "success": "Thank you! We'll be in touch within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    }
+  }
+}
