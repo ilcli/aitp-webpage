@@ -1,46 +1,68 @@
-import { useTranslations } from 'next-intl';
-import { DashboardMockup } from './dashboard-mockup';
-import { createScheduleUrl } from '@/config/site';
-import { CheckCircleIcon } from '@heroicons/react/24/outline';
+"use client";
+
+import { useTranslations } from "next-intl";
+import { DashboardMockup } from "./dashboard-mockup";
+import { createScheduleUrl } from "@/config/site";
+import { CheckCircleIcon } from "@heroicons/react/24/outline";
+import Typewriter from "typewriter-effect";
 
 export function Hero() {
-  const t = useTranslations('hero');
+  const t = useTranslations("hero");
+
+  const typewriterPhrases = [
+    t("typewriterPhrases.0"),
+    t("typewriterPhrases.1"),
+    t("typewriterPhrases.2"),
+    t("typewriterPhrases.3"),
+  ];
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-background to-accent-50 dark:from-accent-900 dark:via-background dark:to-accent-800">
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 lg:px-8 lg:pb-24 lg:pt-32">
         <div className="text-center">
           {/* Main Headline - Clear Value Prop */}
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            {t('headline')}
-            <span className="block text-primary-600 dark:text-primary-400">
-              {t('subheadline')}
+            {t("headline")}{" "}
+            <span className="text-primary-600 dark:text-primary-400">
+              <Typewriter
+                options={{
+                  strings: typewriterPhrases,
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                  deleteSpeed: 50,
+                }}
+              />
+            </span>
+            <span className="mt-2 block text-primary-600 dark:text-primary-400">
+              {t("subheadline")}
             </span>
           </h1>
 
           {/* Supporting Text */}
-          <p className="mx-auto mt-6 mb-8 max-w-3xl text-balance text-xl text-accent-600 dark:text-accent-400 sm:text-2xl">
-            {t('subheading')}
+          <p className="mx-auto mb-8 mt-6 max-w-3xl text-balance text-xl text-accent-600 dark:text-accent-400 sm:text-2xl">
+            {t("subheading")}
           </p>
 
           {/* Benefit Bullets */}
           <div className="mx-auto mb-10 max-w-3xl">
             <div className="grid grid-cols-1 gap-4 text-left sm:grid-cols-3">
               <div className="flex items-start space-x-3">
-                <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-green-500 mt-0.5" />
+                <CheckCircleIcon className="mt-0.5 h-6 w-6 flex-shrink-0 text-green-500" />
                 <span className="text-base text-accent-700 dark:text-accent-300">
-                  {t('benefits.1')}
+                  {t("benefits.1")}
                 </span>
               </div>
               <div className="flex items-start space-x-3">
-                <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-green-500 mt-0.5" />
+                <CheckCircleIcon className="mt-0.5 h-6 w-6 flex-shrink-0 text-green-500" />
                 <span className="text-base text-accent-700 dark:text-accent-300">
-                  {t('benefits.2')}
+                  {t("benefits.2")}
                 </span>
               </div>
               <div className="flex items-start space-x-3">
-                <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-green-500 mt-0.5" />
+                <CheckCircleIcon className="mt-0.5 h-6 w-6 flex-shrink-0 text-green-500" />
                 <span className="text-base text-accent-700 dark:text-accent-300">
-                  {t('benefits.3')}
+                  {t("benefits.3")}
                 </span>
               </div>
             </div>
@@ -49,17 +71,17 @@ export function Hero() {
           {/* Single Power CTA with Expectation Text */}
           <div className="mb-12">
             <a
-              href={createScheduleUrl('website', 'hero', 'main')}
+              href={createScheduleUrl("website", "hero", "main")}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-block transform px-12 py-5 text-xl font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              {t('cta.primary')}
+              {t("cta.primary")}
             </a>
-            
+
             {/* What Happens Next? */}
-            <p className="mt-4 text-sm text-accent-600 dark:text-accent-400 italic">
-              {t('cta.expectation')}
+            <p className="mt-4 text-sm italic text-accent-600 dark:text-accent-400">
+              {t("cta.expectation")}
             </p>
           </div>
 
