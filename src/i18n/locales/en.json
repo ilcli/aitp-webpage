@@ -6,56 +6,56 @@
     "cta": "Book 30-Min Demo"
   },
   "hero": {
-    "headline": "Cut reporting time by 70% for your municipal team",
+    "headline": "Municipal automation built for Israeli government workflows",
     "subheadline": "— no IT required",
     "typewriter": {
       "words": ["Legacy Systems", "Manual Workflows", "Data Silos", "Complex Processes"]
     },
     "subtitle": "into Smart Business Solutions",
-    "subheading": "Turn Excel chaos into one-click reports. Automate data entry. Generate compliance documents instantly.",
+    "subheading": "Transform manual processes into automated workflows. Generate compliance reports instantly. Enable citizen self-service through multiple channels including WhatsApp.",
     "benefits": {
       "1": "Automate manual data entry in minutes, not months",
       "2": "Generate compliance reports with one click",
-      "3": "Save 20+ hours per week on repetitive tasks"
+      "3": "Enable 24/7 citizen services and self-service"
     },
     "cta": {
       "primary": "Book Your 30-Minute Demo",
       "secondary": "View Demo",
-      "expectation": "In 30 minutes, we'll map your workflows and show exactly where automation can save your budget"
+      "expectation": "In 30 minutes, we'll map your workflows and identify automation opportunities for your municipal operations"
     },
     "dashboard": {
       "title": "Operations Command Center",
       "metric1": "Manual Tasks Reduced",
-      "metric1Value": "87%",
+      "metric1Value": "Significant",
       "metric2": "Report Generation",
-      "metric2Value": "24x Faster",
+      "metric2Value": "Automated",
       "metric3": "Data Accuracy",
       "metric3Value": "99.9%",
       "status": "Real-time monitoring active"
     }
   },
   "socialProof": {
-    "title": "Trusted by Leading Organizations",
-    "subtitle": "Empowering enterprises and institutions with intelligent automation"
+    "title": "Specialized for Israeli Municipal Excellence",
+    "subtitle": "Built specifically for Hebrew/English workflows and local compliance standards"
   },
   "features": {
     "title": "Your Excel Hell, Solved",
     "subtitle": "Stop copying and pasting. Start automating the work that eats your day.",
     "card1": {
       "title": "Turn Excel Chaos into One-Click Reports",
-      "description": "That weekly report that takes 3 days? Now it's a button. Pull data from all departments, format it perfectly, and send it out — automatically."
+      "description": "Transform weekly reporting from a multi-day process to a single click. Pull data from all departments, format it perfectly, and send it out — automatically."
     },
     "card2": {
       "title": "Stop Manual Data Entry Forever",
-      "description": "No more copying from PDFs to spreadsheets. Our system reads permits, applications, and forms, then fills your databases instantly."
+      "description": "Automated data extraction from documents and forms eliminates manual copying from PDFs to spreadsheets. Your databases update instantly."
     },
     "card3": {
       "title": "Never Miss Compliance Deadlines",
       "description": "Automatic alerts for regulatory reports. Generate state-required documents with current data. No scrambling at month-end."
     },
     "card4": {
-      "title": "Give Citizens Self-Service (Finally)",
-      "description": "Let residents check permit status, pay fees, and submit requests online. Your phone stops ringing, their satisfaction goes up."
+      "title": "Enable 24/7 Citizen Services via WhatsApp",
+      "description": "Citizens can check permit status, submit requests, pay fees, and receive updates through WhatsApp and web portals. Automated responses handle common inquiries instantly."
     },
     "card5": {
       "title": "Connect Your Scattered Systems",
@@ -66,13 +66,45 @@
       "description": "No IT degree required. If they can use email, they can use this. We train everyone and stay until they're comfortable."
     }
   },
+  "whatsapp": {
+    "title": "Meet Citizens Where They Are - WhatsApp",
+    "subtitle": "Enable residents to access municipal services 24/7 through their preferred communication channel",
+    "features": {
+      "status": {
+        "title": "Check Status Instantly",
+        "description": "Permit applications, license renewals, and service request updates delivered automatically"
+      },
+      "requests": {
+        "title": "Submit Service Requests",
+        "description": "Report issues, request services, and file complaints with photo attachments and location data"
+      },
+      "updates": {
+        "title": "Receive Automated Notifications",
+        "description": "Payment reminders, deadline alerts, and important municipal announcements"
+      },
+      "access": {
+        "title": "24/7 Information Access",
+        "description": "Office hours, contact information, forms, and frequently asked questions available anytime"
+      }
+    },
+    "integration": {
+      "title": "Seamlessly Integrated with Your Municipal Systems",
+      "description": "WhatsApp communications sync directly with your existing databases and workflows",
+      "features": {
+        "automated": "Automated Responses",
+        "multilingual": "Hebrew/English Support",
+        "secure": "Secure & Private",
+        "compliant": "Government Compliant"
+      }
+    }
+  },
   "cta": {
     "title": "Ready to Stop the Manual Madness?",
     "subtitle": "30 minutes is all it takes to see how much time you'll save",
     "button": "Book Your 30-Minute Demo",
     "button_secondary": "Learn Our Process",
-    "testimonial": "We went from 40 hours of monthly reporting to 2 hours. The ROI was immediate.",
-    "author": "Finance Director, Regional Municipality"
+    "testimonial": "Transformed our monthly reporting from a multi-day process to automated delivery. Our staff can now focus on serving citizens instead of fighting spreadsheets.",
+    "author": "Municipal Finance Department"
   },
   "footer": {
     "tagline": "Intelligent Automation for Modern Organizations",

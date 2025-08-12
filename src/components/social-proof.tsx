@@ -5,19 +5,13 @@ import { useTranslations } from 'next-intl';
 export function SocialProof() {
   const t = useTranslations('socialProof');
   
-  const logos = [
-    { name: "TechCorp", alt: "TechCorp - Technology Solutions" },
-    { name: "DataFlow", alt: "DataFlow - Data Analytics Platform" },
-    { name: "InnovateAI", alt: "InnovateAI - AI Innovation Company" },
-    { name: "SmartSys", alt: "SmartSys - Smart Systems Integration" },
-    { name: "AutoFlow", alt: "AutoFlow - Workflow Automation" },
-    { name: "ProcessPro", alt: "ProcessPro - Process Management" },
-    { name: "CloudTech", alt: "CloudTech - Cloud Infrastructure" },
-    { name: "MetricsCorp", alt: "MetricsCorp - Business Analytics" },
-    { name: "StreamlineAI", alt: "StreamlineAI - AI-Powered Efficiency" },
-    { name: "DataSync", alt: "DataSync - Data Integration Platform" },
-    { name: "WorkflowPro", alt: "WorkflowPro - Professional Workflows" },
-    { name: "InsightTech", alt: "InsightTech - Business Intelligence" },
+  const capabilities = [
+    { name: "Government Workflow Expertise", icon: "🏛️" },
+    { name: "Hebrew/English Language Support", icon: "🌐" },
+    { name: "Local Compliance Standards", icon: "✅" },
+    { name: "Innovation Authority Eligible", icon: "🚀" },
+    { name: "Municipal Process Understanding", icon: "🏢" },
+    { name: "Israeli Tech Excellence", icon: "🇮🇱" },
   ];
 
   return (
@@ -29,72 +23,46 @@ export function SocialProof() {
           </h2>
         </div>
 
-        {/* Simple Logo Carousel */}
+        {/* Capability Highlights */}
         <div 
-          className="relative overflow-hidden"
+          className="grid grid-cols-2 gap-6 md:grid-cols-3"
           role="region"
-          aria-label="Client logos showcase"
+          aria-label="Platform capabilities"
         >
-          <div className="logo-scroll">
-            <div className="logo-track">
-              {/* First set of logos */}
-              {logos.map((logo, index) => (
-                <div
-                  key={`logo-${index}`}
-                  className="logo-item"
-                >
-                  <div className="logo-content">
-                    <span
-                      className="text-xs font-semibold text-accent-700 dark:text-accent-200"
-                      aria-label={logo.alt}
-                      role="img"
-                    >
-                      {logo.name}
-                    </span>
-                  </div>
-                </div>
-              ))}
-              
-              {/* Duplicate set for seamless loop */}
-              {logos.map((logo, index) => (
-                <div
-                  key={`logo-dup-${index}`}
-                  className="logo-item"
-                >
-                  <div className="logo-content">
-                    <span
-                      className="text-xs font-semibold text-accent-700 dark:text-accent-200"
-                      aria-label={logo.alt}
-                      role="img"
-                    >
-                      {logo.name}
-                    </span>
-                  </div>
-                </div>
-              ))}
+          {capabilities.map((capability, index) => (
+            <div
+              key={`capability-${index}`}
+              className="flex flex-col items-center p-4 rounded-lg bg-white/50 dark:bg-accent-800/50 backdrop-blur-sm"
+            >
+              <div className="text-2xl mb-2">
+                {capability.icon}
+              </div>
+              <span className="text-sm font-medium text-center text-accent-700 dark:text-accent-200">
+                {capability.name}
+              </span>
             </div>
-          </div>
+          ))}
         </div>
 
-        {/* Industry indicators */}
+        {/* Municipal Department Focus */}
         <div className="mt-12 flex flex-wrap justify-center gap-4 text-sm text-accent-500 dark:text-accent-400">
           <span className="rounded-full bg-accent-100 px-3 py-1 dark:bg-accent-800">
-            Healthcare
+            Finance & Budgeting
           </span>
           <span className="rounded-full bg-accent-100 px-3 py-1 dark:bg-accent-800">
-            Finance
+            Urban Planning
           </span>
           <span className="rounded-full bg-accent-100 px-3 py-1 dark:bg-accent-800">
-            E-commerce
+            Permits & Licensing
           </span>
           <span className="rounded-full bg-accent-100 px-3 py-1 dark:bg-accent-800">
-            Education
+            Citizen Services
           </span>
           <span className="rounded-full bg-accent-100 px-3 py-1 dark:bg-accent-800">
-            Manufacturing
+            Compliance & Reporting
           </span>
           <span className="rounded-full bg-accent-100 px-3 py-1 dark:bg-accent-800">
-            Professional Services
+            Public Works
           </span>
         </div>
       </div>

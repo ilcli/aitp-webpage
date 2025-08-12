@@ -31,11 +31,11 @@ export function GovTechSection() {
                 <h3 className="text-xl font-semibold text-foreground">
                   Success Rate
                 </h3>
-                <p className="text-3xl font-bold text-primary-600">72%</p>
+                <p className="text-3xl font-bold text-primary-600">High</p>
               </div>
             </div>
             <p className="text-accent-600 dark:text-accent-400">
-              Out of 200 GovTech initiatives launched in Israel
+              GovTech initiatives show strong performance nationwide
             </p>
           </div>
 
@@ -49,11 +49,11 @@ export function GovTechSection() {
                 <h3 className="text-xl font-semibold text-foreground">
                   Total Investment
                 </h3>
-                <p className="text-3xl font-bold text-green-600">₪100M</p>
+                <p className="text-3xl font-bold text-green-600">Significant</p>
               </div>
             </div>
             <p className="text-accent-600 dark:text-accent-400">
-              Innovation Authority investment in tech solutions
+              Innovation Authority supports municipal tech solutions
             </p>
           </div>
 
@@ -67,7 +67,7 @@ export function GovTechSection() {
                 <h3 className="text-xl font-semibold text-foreground">
                   Municipalities
                 </h3>
-                <p className="text-3xl font-bold text-blue-600">15</p>
+                <p className="text-3xl font-bold text-blue-600">Many</p>
               </div>
             </div>
             <p className="text-accent-600 dark:text-accent-400">
@@ -102,7 +102,7 @@ export function GovTechSection() {
                   Proven Results
                 </h4>
                 <p className="text-accent-600 dark:text-accent-400">
-                  Smart automation solutions reducing manual workload by 72% on average
+                  Smart automation solutions significantly reducing manual workload
                 </p>
               </div>
             </div>
