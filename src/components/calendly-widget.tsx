@@ -32,7 +32,7 @@ export function CalendlyWidget({
   const locale = useLocale();
 
   // Use the provided URL or construct from config
-  const calendlyUrl = url || "https://calendly.com/eli-fishbakh/30min";
+  const calendlyUrl = url || "https://calendly.com/synqer-ai";
 
   // Build URL with parameters
   const buildCalendlyUrl = () => {

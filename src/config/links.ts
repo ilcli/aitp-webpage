@@ -6,7 +6,7 @@
 export const EXTERNAL_LINKS = {
   // Calendly & Scheduling
   calendly: {
-    baseUrl: "https://calendly.com/eli-fishbakh/30min",
+    baseUrl: "https://calendly.com/synqer-ai",
     // Auto-generates URLs with UTM parameters via createScheduleUrl()
   },
 

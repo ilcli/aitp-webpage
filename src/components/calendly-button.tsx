@@ -20,7 +20,7 @@ interface CalendlyButtonProps {
 }
 
 export function CalendlyButton({
-  url = "https://calendly.com/eli-fishbakh/30min",
+  url = "https://calendly.com/synqer-ai",
   text,
   className = "btn-primary",
   prefill,
