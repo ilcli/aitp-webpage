@@ -9,7 +9,8 @@ import Typewriter from "typewriter-effect";
 export function Hero() {
   const t = useTranslations("hero");
 
-  const typewriterPhrases = t("typewriterPhrases") as unknown as string[];
+  // Use t.raw() to get the array directly
+  const typewriterPhrases = t.raw("typewriterPhrases") as string[];
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-background to-accent-50 dark:from-accent-900 dark:via-background dark:to-accent-800">
