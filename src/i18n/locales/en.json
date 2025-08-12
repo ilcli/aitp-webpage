@@ -6,13 +6,24 @@
     "cta": "Book 30-Min Demo"
   },
   "hero": {
-    "headline": "Custom automation solutions for Israeli municipalities and organizations",
-    "subheadline": "— deployed on your preferred infrastructure",
+    "headline": "Custom-built automations, delivered",
+    "subheadline": "Deployed on your preferred infrastructure",
+    "typewriterPhrases": [
+      "on your terms",
+      "with full security",
+      "with zero waste",
+      "at peak efficiency"
+    ],
     "typewriter": {
-      "words": ["Legacy Systems", "Manual Workflows", "Data Silos", "Complex Processes"]
+      "words": [
+        "Legacy Systems",
+        "Manual Workflows",
+        "Data Silos",
+        "Complex Processes"
+      ]
     },
     "subtitle": "into Smart Business Solutions",
-    "subheading": "Transform complex manual processes into automated workflows deployed on Azure, Railway, or your chosen infrastructure. Enable 24/7 citizen services through WhatsApp and web portals.",
+    "subheading": "Transform complex manual processes into automated workflows deployed on your chosen infrastructure. Enable 24/7 citizen services through WhatsApp and web portals.",
     "benefits": {
       "1": "Automate manual data entry with simple setup",
       "2": "Generate compliance reports with one click",
@@ -43,7 +54,7 @@
     "subtitle": "Deployed on your preferred infrastructure with full client ownership",
     "processAutomation": {
       "title": "Custom Workflow Automation",
-      "description": "Bespoke automation solutions deployed on Azure, Railway, or your chosen infrastructure. From Excel chaos to automated reporting systems.",
+      "description": "Bespoke automation solutions deployed on your chosen infrastructure. From Excel chaos to automated reporting systems.",
       "benefits": {
         "1": "Custom development tailored to your existing systems and compliance needs",
         "2": "Deploy on your preferred cloud infrastructure or on-premises environment",

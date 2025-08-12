@@ -21,7 +21,9 @@
       "Bash(grep:*)",
       "WebFetch(domain:synqer.ai)",
       "WebFetch(domain:www.synqer.ai)",
-      "WebFetch(domain:n8n.io)"
+      "WebFetch(domain:n8n.io)",
+      "Bash(npm run dev:*)",
+      "Bash(PORT=3004 npm start)"
     ],
     "deny": []
   }

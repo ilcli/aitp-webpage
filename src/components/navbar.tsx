@@ -3,16 +3,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations, useLocale } from "next-intl";
 import { ThemeToggle } from "./theme-toggle";
+import { LanguageToggle } from "./language-toggle";
 import { useState } from "react";
-import { createScheduleUrl } from '@/config/site';
+import { createScheduleUrl } from "@/config/site";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const locale = useLocale();
-  const t = useTranslations('nav');
+  const t = useTranslations("nav");
 
   const isActive = (path: string) => pathname === path;
 
@@ -22,14 +23,14 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href={`/${locale}`} className="flex items-center group">
+            <Link href={`/${locale}`} className="group flex items-center">
               <div className="relative">
-                <Image 
-                  src="/favicon.svg" 
-                  alt="Synqer.ai - Smart Municipal Solutions" 
+                <Image
+                  src="/favicon.svg"
+                  alt="Synqer.ai - Smart Municipal Solutions"
                   width={60}
                   height={20}
-                  className="transition-transform duration-200 group-hover:scale-105 max-h-8 w-auto"
+                  className="max-h-8 w-auto transition-transform duration-200 group-hover:scale-105"
                   priority
                 />
               </div>
@@ -37,58 +38,60 @@ export function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block flex-1">
+          <div className="hidden flex-1 md:block">
             <div className="flex items-center justify-center">
               <div className="flex items-baseline space-x-6 lg:space-x-8">
                 <Link
                   href={`/${locale}/services`}
-                  className={`nav-link transition-colors font-medium ${
+                  className={`nav-link font-medium transition-colors ${
                     isActive(`/${locale}/services`)
                       ? "text-primary-600 dark:text-primary-400"
                       : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
                   }`}
                 >
-                  {t('services')}
+                  {t("services")}
                 </Link>
                 <Link
                   href={`/${locale}/about`}
-                  className={`nav-link transition-colors font-medium ${
+                  className={`nav-link font-medium transition-colors ${
                     isActive(`/${locale}/about`)
                       ? "text-primary-600 dark:text-primary-400"
                       : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
                   }`}
                 >
-                  {t('about')}
+                  {t("about")}
                 </Link>
                 <Link
                   href={`/${locale}/contact`}
-                  className={`nav-link transition-colors font-medium ${
+                  className={`nav-link font-medium transition-colors ${
                     isActive(`/${locale}/contact`)
                       ? "text-primary-600 dark:text-primary-400"
                       : "text-accent-700 hover:text-primary-600 dark:text-accent-300 dark:hover:text-primary-400"
                   }`}
                 >
-                  {t('contact')}
+                  {t("contact")}
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* Right side - Theme Toggle and CTA */}
+          {/* Right side - Language Toggle, Theme Toggle and CTA */}
           <div className="hidden items-center space-x-4 md:flex">
+            <LanguageToggle />
             <ThemeToggle />
             <a
-              href={createScheduleUrl('website', 'navbar', 'main')}
+              href={createScheduleUrl("website", "navbar", "main")}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary ml-4"
             >
-              {t('cta')}
+              {t("cta")}
             </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="flex items-center space-x-3 md:hidden">
+            <LanguageToggle />
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -147,7 +150,7 @@ export function Navbar() {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              {t('services')}
+              {t("services")}
             </Link>
             <Link
               href={`/${locale}/about`}
@@ -158,7 +161,7 @@ export function Navbar() {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              {t('about')}
+              {t("about")}
             </Link>
             <Link
               href={`/${locale}/contact`}
@@ -169,17 +172,17 @@ export function Navbar() {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              {t('contact')}
+              {t("contact")}
             </Link>
             <div className="pt-2">
               <a
-                href={createScheduleUrl('website', 'navbar', 'mobile')}
+                href={createScheduleUrl("website", "navbar", "mobile")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('cta')}
+                {t("cta")}
               </a>
             </div>
           </div>
