@@ -1,147 +1,158 @@
 "use client";
-import Link from 'next/link';
-import { useLocale } from 'next-intl';
-import { CheckCircleIcon, TrophyIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
-import { createScheduleUrl } from '@/config/site';
+import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import {
+  CheckCircleIcon,
+  TrophyIcon,
+  RocketLaunchIcon,
+} from "@heroicons/react/24/outline";
+import { createScheduleUrl } from "@/config/site";
 
 export function GovTechSection() {
   const locale = useLocale();
+  const t = useTranslations("govtech");
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+    <section className="bg-gradient-to-b from-white to-gray-50 py-16 dark:from-gray-900 dark:to-gray-800 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-4">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-2xl flex items-center justify-center">
+        <div className="mb-16 text-center">
+          <div className="mb-4 flex items-center justify-center">
+            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900">
               <RocketLaunchIcon className="h-8 w-8 text-blue-600 dark:text-blue-400" />
             </div>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Get Your Innovation Funded
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white lg:text-4xl">
+            {t("title")}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            We help organizations access grants and funding programs to implement automation solutions — we&apos;ll handle the application process
+          <p className="mx-auto max-w-3xl text-lg text-gray-600 dark:text-gray-300">
+            {t("subtitle")}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Success Rate Card */}
-          <div className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-700">
-            <div className="flex items-center mb-6">
-              <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <div className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:border-blue-200 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-800 dark:hover:border-blue-700">
+            <div className="mb-6 flex items-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-green-100 transition-transform duration-300 group-hover:scale-110 dark:bg-green-900">
                 <TrophyIcon className="h-8 w-8 text-green-600 dark:text-green-400" />
               </div>
               <div className="ml-4">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  Proven Results
+                  {t("successRate.title")}
                 </h3>
-                <p className="text-3xl font-bold text-green-600 dark:text-green-400">Strong</p>
+                <p className="text-3xl font-bold text-green-600 dark:text-green-400">
+                  {t("successRate.value")}
+                </p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              We help organizations navigate funding applications for digital transformation initiatives
+              {t("successRate.description")}
             </p>
-            <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-green-500/10 rounded-2xl transition-all duration-300 pointer-events-none" />
+            <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-green-500/0 to-green-500/0 transition-all duration-300 group-hover:from-green-500/5 group-hover:to-green-500/10" />
           </div>
 
           {/* Funding Available Card */}
-          <div className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-700">
-            <div className="flex items-center mb-6">
-              <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <div className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:border-purple-200 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-800 dark:hover:border-purple-700">
+            <div className="mb-6 flex items-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-purple-100 transition-transform duration-300 group-hover:scale-110 dark:bg-purple-900">
                 <span className="text-3xl">💰</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  Funding Available
+                  {t("funding.title")}
                 </h3>
-                <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">Available</p>
+                <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">
+                  {t("funding.value")}
+                </p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Innovation Authority and other programs may help with implementation costs
+              {t("funding.description")}
             </p>
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-purple-500/10 rounded-2xl transition-all duration-300 pointer-events-none" />
+            <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-500/0 to-purple-500/0 transition-all duration-300 group-hover:from-purple-500/5 group-hover:to-purple-500/10" />
           </div>
 
           {/* Organizations Helped Card */}
-          <div className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-700">
-            <div className="flex items-center mb-6">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <div className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:border-blue-200 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-800 dark:hover:border-blue-700">
+            <div className="mb-6 flex items-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-blue-100 transition-transform duration-300 group-hover:scale-110 dark:bg-blue-900">
                 <span className="text-3xl">🏢</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  Growing Client Base
+                  {t("clientBase.title")}
                 </h3>
-                <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">Active</p>
+                <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                  {t("clientBase.value")}
+                </p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Supporting automation projects across various sectors and organization types
+              {t("clientBase.description")}
             </p>
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-blue-500/10 rounded-2xl transition-all duration-300 pointer-events-none" />
+            <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/0 to-blue-500/0 transition-all duration-300 group-hover:from-blue-500/5 group-hover:to-blue-500/10" />
           </div>
         </div>
 
         {/* Key Benefits */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 lg:p-12 border border-gray-200 dark:border-gray-700 mb-12">
-          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            How We Help You Get Funded
+        <div className="mb-12 rounded-2xl border border-gray-200 bg-white p-8 shadow-xl dark:border-gray-700 dark:bg-gray-800 lg:p-12">
+          <h3 className="mb-8 text-center text-2xl font-bold text-gray-900 dark:text-white lg:text-3xl">
+            {t("howWeHelp.title")}
           </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+              <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
                 <CheckCircleIcon className="h-5 w-5 text-green-600 dark:text-green-400" />
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 dark:text-white mb-2">
-                  Pre-Qualified Solutions
+                <h4 className="mb-2 font-bold text-gray-900 dark:text-white">
+                  {t("howWeHelp.preQualified.title")}
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Our automation solutions meet all technical requirements for Innovation Authority and similar grants
+                  {t("howWeHelp.preQualified.description")}
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+              <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
                 <CheckCircleIcon className="h-5 w-5 text-green-600 dark:text-green-400" />
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 dark:text-white mb-2">
-                  Complete Application Support
+                <h4 className="mb-2 font-bold text-gray-900 dark:text-white">
+                  {t("howWeHelp.applicationSupport.title")}
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We handle the technical documentation, ROI calculations, and compliance requirements
+                  {t("howWeHelp.applicationSupport.description")}
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+              <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
                 <CheckCircleIcon className="h-5 w-5 text-green-600 dark:text-green-400" />
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 dark:text-white mb-2">
-                  Proven Track Record
+                <h4 className="mb-2 font-bold text-gray-900 dark:text-white">
+                  {t("howWeHelp.provenTrack.title")}
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Track record of successful implementations with measurable efficiency improvements
+                  {t("howWeHelp.provenTrack.description")}
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+              <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
                 <CheckCircleIcon className="h-5 w-5 text-green-600 dark:text-green-400" />
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 dark:text-white mb-2">
-                  End-to-End Partnership
+                <h4 className="mb-2 font-bold text-gray-900 dark:text-white">
+                  {t("howWeHelp.endToEnd.title")}
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300">
-                  From initial assessment through funding application to full implementation and support
+                  {t("howWeHelp.endToEnd.description")}
                 </p>
               </div>
             </div>
@@ -150,28 +161,28 @@ export function GovTechSection() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 rounded-2xl p-8 lg:p-12 text-white shadow-2xl">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-              Ready to Fund Your Digital Transformation?
+          <div className="rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 p-8 text-white shadow-2xl lg:p-12">
+            <h3 className="mb-4 text-2xl font-bold lg:text-3xl">
+              {t("cta.title")}
             </h3>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              Schedule a consultation to discuss your funding options and see how we can help you access available grants
+            <p className="mx-auto mb-8 max-w-2xl text-lg opacity-90">
+              {t("cta.subtitle")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <a
-                href={createScheduleUrl('funding-consultation')}
+                href={createScheduleUrl("funding-consultation")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200"
+                className="inline-flex transform items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-bold text-blue-600 shadow-lg transition-colors transition-transform duration-200 hover:scale-105 hover:bg-gray-100 hover:shadow-xl"
               >
-                <RocketLaunchIcon className="h-5 w-5 mr-2" />
-                Schedule Funding Consultation
+                <RocketLaunchIcon className="mr-2 h-5 w-5" />
+                {t("cta.primaryButton")}
               </a>
-              <Link 
+              <Link
                 href={`/${locale}/contact/`}
-                className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+                className="inline-flex items-center justify-center rounded-full border-2 border-white px-8 py-4 text-lg font-bold text-white transition-colors hover:bg-white hover:text-blue-600"
               >
-                Learn More About Grants
+                {t("cta.secondaryButton")}
               </Link>
             </div>
           </div>

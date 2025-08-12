@@ -2,9 +2,11 @@
 
 import * as React from "react";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const t = useTranslations("themeToggle");
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -26,7 +28,7 @@ export function ThemeToggle() {
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="rounded-full bg-accent-100 p-2 transition-all duration-200 hover:scale-110 hover:bg-accent-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 active:scale-95 dark:bg-accent-800 dark:hover:bg-accent-700"
-      aria-label="Toggle theme"
+      aria-label={t("ariaLabel")}
     >
       {theme === "dark" ? (
         <svg

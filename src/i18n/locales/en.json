@@ -226,5 +226,58 @@
       "success": "Thank you! We'll be in touch within 24 hours.",
       "error": "Something went wrong. Please try again."
     }
+  },
+  "govtech": {
+    "title": "Get Your Innovation Funded",
+    "subtitle": "We help organizations access grants and funding programs to implement automation solutions — we'll handle the application process",
+    "successRate": {
+      "title": "Proven Results",
+      "value": "Strong",
+      "description": "We help organizations navigate funding applications for digital transformation initiatives"
+    },
+    "funding": {
+      "title": "Funding Available",
+      "value": "Available",
+      "description": "Innovation Authority and other programs may help with implementation costs"
+    },
+    "clientBase": {
+      "title": "Growing Client Base",
+      "value": "Active",
+      "description": "Supporting automation projects across various sectors and organization types"
+    },
+    "howWeHelp": {
+      "title": "How We Help You Get Funded",
+      "preQualified": {
+        "title": "Pre-Qualified Solutions",
+        "description": "Our automation solutions meet all technical requirements for Innovation Authority and similar grants"
+      },
+      "applicationSupport": {
+        "title": "Complete Application Support",
+        "description": "We handle the technical documentation, ROI calculations, and compliance requirements"
+      },
+      "provenTrack": {
+        "title": "Proven Track Record",
+        "description": "Track record of successful implementations with measurable efficiency improvements"
+      },
+      "endToEnd": {
+        "title": "End-to-End Partnership",
+        "description": "From initial assessment through funding application to full implementation and support"
+      }
+    },
+    "cta": {
+      "title": "Ready to Fund Your Digital Transformation?",
+      "subtitle": "Schedule a consultation to discuss your funding options and see how we can help you access available grants",
+      "primaryButton": "Schedule Funding Consultation",
+      "secondaryButton": "Learn More About Grants"
+    }
+  },
+  "errorBoundary": {
+    "title": "Something went wrong",
+    "description": "We apologize for the inconvenience. This component encountered an error.",
+    "tryAgain": "Try Again",
+    "errorDetails": "Error Details (Development)"
+  },
+  "themeToggle": {
+    "ariaLabel": "Toggle theme"
   }
 }
