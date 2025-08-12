@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -54,33 +51,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const locale = await getLocale();
-  const messages = await getMessages();
-
   return (
-    <html
-      lang={locale}
-      dir={locale === "he" ? "rtl" : "ltr"}
-      suppressHydrationWarning
-    >
-      <body className="antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
-        <Analytics />
-      </body>
-    </html>
+    <>
+      {children}
+      <Analytics />
+    </>
   );
 }

@@ -1,5 +1,9 @@
 import { notFound } from "next/navigation";
 import { locales } from "@/i18n/config";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { ThemeProvider } from "@/components/theme-provider";
+import "../globals.css";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -17,5 +21,27 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  return <>{children}</>;
+  // Load messages for the specific locale from the URL
+  const messages = await getMessages({ locale });
+
+  return (
+    <html
+      lang={locale}
+      dir={locale === "he" ? "rtl" : "ltr"}
+      suppressHydrationWarning
+    >
+      <body className="antialiased">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }
