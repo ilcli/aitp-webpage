@@ -6,7 +6,7 @@
     "cta": "Book 30-Min Demo"
   },
   "hero": {
-    "headline": "Custom-built automations, delivered",
+    "headline": "Custom-built automations",
     "subheadline": "Deployed on your preferred infrastructure",
     "typewriterPhrases": [
       "on your terms",
@@ -42,7 +42,9 @@
       "metric2Value": "Automated",
       "metric3": "Data Accuracy",
       "metric3Value": "High",
-      "status": "Real-time monitoring active"
+      "status": "Real-time monitoring active",
+      "processingVolume": "Processing Volume",
+      "last30Days": "Last 30 days"
     }
   },
   "socialProof": {
@@ -208,13 +210,67 @@
     "copyright": "© 2024 Synqer.ai. All rights reserved."
   },
   "contact": {
-    "title": "Let's Design Your Custom Automation Solution",
+    "title": "Let's Talk",
     "subtitle": "Schedule a discovery call to assess your workflows and design a tailored solution for your infrastructure",
+    "sendMessage": "Send us a message",
+    "getInTouch": "Get in touch",
+    "emailUs": "Email Us",
+    "emailResponse": "We typically respond within 24 hours",
+    "connectTelegram": "Connect on Telegram",
+    "telegramDescription": "For quick questions and updates",
+    "whatToExpect": "What to expect",
+    "expectations": {
+      "response": "Initial response within 24 hours",
+      "consultation": "Free 30-minute consultation call",
+      "proposal": "Custom proposal within 48 hours",
+      "noPressure": "No pressure, just clarity"
+    },
+    "commonQuestions": "Common Questions",
+    "faq": {
+      "projectTime": {
+        "question": "How long does a typical project take?",
+        "answer": "Most automation projects take 4-8 weeks, depending on complexity and integration requirements."
+      },
+      "smallTeams": {
+        "question": "Do you work with small teams?",
+        "answer": "Absolutely! We work with organizations of all sizes, from small municipalities to large enterprises."
+      },
+      "ongoingSupport": {
+        "question": "What if we need ongoing support?",
+        "answer": "We offer flexible support packages and can work with you on a retainer basis for ongoing projects."
+      },
+      "existingTools": {
+        "question": "Can you work with our existing tools?",
+        "answer": "Yes! We specialize in integrating with your current workflow and tools rather than replacing them."
+      }
+    },
+    "scheduleSection": {
+      "title": "Schedule a Meeting",
+      "subtitle": "Book a 30-minute discovery call directly in our calendar",
+      "preferEmail": "Prefer email? Fill out the form below"
+    },
+    "quickContact": {
+      "title": "Quick Contact"
+    },
+    "processSteps": {
+      "quickResponse": "Quick Response",
+      "discoveryCall": "Discovery Call",
+      "customProposal": "Custom Proposal",
+      "noPressure": "No Pressure",
+      "quickResponseDesc": "Initial response within 24 hours",
+      "discoveryCallDesc": "30-minute consultation to understand your needs",
+      "customProposalDesc": "Tailored solution within 48 hours",
+      "noPressureDesc": "Clear information, your decision"
+    },
     "form": {
       "name": "Name",
+      "namePlaceholder": "Your full name",
       "email": "Email",
+      "emailPlaceholder": "your.email@organization.com",
       "organization": "Organization",
+      "organizationPlaceholder": "Your organization name",
       "challenge": "What's your biggest data challenge?",
+      "challengePlaceholder": "Select your biggest data challenge...",
       "challengeOptions": {
         "manual": "Manual processes and workflows",
         "scattered": "Data scattered across systems",
@@ -279,5 +335,127 @@
   },
   "themeToggle": {
     "ariaLabel": "Toggle theme"
+  },
+  "servicesPage": {
+    "title": "Our Services",
+    "subtitle": "We specialize in three core areas that transform how teams work with AI.",
+    "learnMore": "Learn More",
+    "aiAutomation": {
+      "title": "AI Automation",
+      "description": "Transform repetitive tasks into intelligent workflows that save hours every day.",
+      "features": {
+        "1": "Document processing & data extraction",
+        "2": "Email and communication automation",
+        "3": "Workflow optimization",
+        "4": "Custom AI integrations"
+      }
+    },
+    "training": {
+      "title": "Training & Change",
+      "description": "Help your team adopt AI tools effectively with hands-on training and support.",
+      "features": {
+        "1": "AI literacy workshops",
+        "2": "Tool-specific training programs",
+        "3": "Change management support",
+        "4": "Ongoing mentorship"
+      }
+    },
+    "noCode": {
+      "title": "No-Code Systems",
+      "description": "Build powerful AI-driven systems without complex coding or technical overhead.",
+      "features": {
+        "1": "Airtable & Notion integrations",
+        "2": "Zapier & Make.com workflows",
+        "3": "Custom dashboard creation",
+        "4": "API integrations"
+      }
+    },
+    "process": {
+      "title": "Our Process",
+      "discover": {
+        "title": "Discover",
+        "description": "We understand your current workflows and identify automation opportunities."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Together, we design systems that fit your team's needs and capabilities."
+      },
+      "deploy": {
+        "title": "Deploy",
+        "description": "We build and implement the solution with your team every step of the way."
+      },
+      "deliver": {
+        "title": "Deliver",
+        "description": "We train your team and provide ongoing support for sustainable success."
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Let's discuss which service would be the best fit for your team.",
+      "button": "Schedule a Consultation"
+    }
+  },
+  "common": {
+    "logoAlt": "Synqer.ai - Smart Municipal Solutions",
+    "languageToggle": "Switch to",
+    "socialLinks": {
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "telegram": "Telegram"
+    }
+  },
+  "about": {
+    "title": "About Synqer.ai",
+    "subtitle": "We specialize in smart automation solutions that transform municipal operations and significantly reduce manual work.",
+    "mission": {
+      "title": "Our Mission",
+      "description1": "At Synqer.ai, we believe automation should solve real municipal problems, not create new complexities. We build smart systems that transform outdated processes into efficient, automated operations.",
+      "description2": "Our approach is hands-on, practical, and focused on delivering systems that your team can actually use and maintain."
+    },
+    "difference": {
+      "title": "What Makes Us Different",
+      "points": {
+        "1": "Automation that focuses on real problems",
+        "2": "Focus on solutions your teams will adopt",
+        "3": "Experience with government and municipal workflows",
+        "4": "Systems built for growth and change"
+      }
+    },
+    "howWeWork": {
+      "title": "How We Work",
+      "steps": {
+        "understand": {
+          "title": "Understand",
+          "description": "We learn your workflows and identify pain points"
+        },
+        "design": {
+          "title": "Design",
+          "description": "Create custom automation solutions that fit your workflow"
+        },
+        "implement": {
+          "title": "Implement",
+          "description": "Build and deploy systems with comprehensive training"
+        },
+        "support": {
+          "title": "Support",
+          "description": "Provide ongoing support and improvements"
+        }
+      }
+    },
+    "expertise": {
+      "title": "Our Expertise",
+      "areas": {
+        "dataIntegration": "Data Integration",
+        "processAutomation": "Process Automation",
+        "citizenEngagement": "Citizen Engagement",
+        "complianceReporting": "Compliance Reporting"
+      }
+    },
+    "cta": {
+      "title": "Let's Build Something Together",
+      "description": "Ready to transform your operations with smart automation?",
+      "button": "Get Started"
+    }
   }
 }

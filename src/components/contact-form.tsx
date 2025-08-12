@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 interface FormData {
   name: string;
@@ -18,7 +18,7 @@ interface FormErrors {
 }
 
 export function ContactForm() {
-  const t = useTranslations('contact.form');
+  const t = useTranslations("contact.form");
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -93,7 +93,9 @@ export function ContactForm() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -108,10 +110,11 @@ export function ContactForm() {
     return (
       <div className="rounded-lg border border-green-200 bg-green-50 p-6 dark:border-green-800 dark:bg-green-900/20">
         <h3 className="mb-2 text-lg font-semibold text-green-800 dark:text-green-200">
-          {t('success')}
+          {t("success")}
         </h3>
         <p className="text-green-700 dark:text-green-300">
-          We&apos;ll get back to you within 24 hours to discuss your municipal automation needs.
+          We&apos;ll get back to you within 24 hours to discuss your municipal
+          automation needs.
         </p>
       </div>
     );
@@ -125,7 +128,7 @@ export function ContactForm() {
           htmlFor="name"
           className="mb-2 block text-sm font-medium text-foreground"
         >
-          {t('name')} <span className="text-red-500">*</span>
+          {t("name")} <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
@@ -138,7 +141,7 @@ export function ContactForm() {
               ? "border-red-300 focus:ring-red-500"
               : "border-accent-300 focus:ring-primary-500 dark:border-accent-700"
           } bg-background text-foreground`}
-          placeholder="Your full name"
+          placeholder={t("namePlaceholder")}
         />
         {errors.name && (
           <p className="mt-1 text-sm text-red-600">{errors.name}</p>
@@ -151,7 +154,7 @@ export function ContactForm() {
           htmlFor="email"
           className="mb-2 block text-sm font-medium text-foreground"
         >
-          {t('email')} <span className="text-red-500">*</span>
+          {t("email")} <span className="text-red-500">*</span>
         </label>
         <input
           type="email"
@@ -164,7 +167,7 @@ export function ContactForm() {
               ? "border-red-300 focus:ring-red-500"
               : "border-accent-300 focus:ring-primary-500 dark:border-accent-700"
           } bg-background text-foreground`}
-          placeholder="your.email@municipality.gov"
+          placeholder={t("emailPlaceholder")}
         />
         {errors.email && (
           <p className="mt-1 text-sm text-red-600">{errors.email}</p>
@@ -177,7 +180,7 @@ export function ContactForm() {
           htmlFor="organization"
           className="mb-2 block text-sm font-medium text-foreground"
         >
-          {t('organization')} <span className="text-red-500">*</span>
+          {t("organization")} <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
@@ -190,7 +193,7 @@ export function ContactForm() {
               ? "border-red-300 focus:ring-red-500"
               : "border-accent-300 focus:ring-primary-500 dark:border-accent-700"
           } bg-background text-foreground`}
-          placeholder="City of Springfield, Metro Regional Authority, etc."
+          placeholder={t("organizationPlaceholder")}
         />
         {errors.organization && (
           <p className="mt-1 text-sm text-red-600">{errors.organization}</p>
@@ -203,7 +206,7 @@ export function ContactForm() {
           htmlFor="challenge"
           className="mb-2 block text-sm font-medium text-foreground"
         >
-          {t('challenge')} <span className="text-red-500">*</span>
+          {t("challenge")} <span className="text-red-500">*</span>
         </label>
         <select
           id="challenge"
@@ -216,11 +219,11 @@ export function ContactForm() {
               : "border-accent-300 focus:ring-primary-500 dark:border-accent-700"
           } bg-background text-foreground`}
         >
-          <option value="">Select your biggest data challenge...</option>
-          <option value="manual">{t('challengeOptions.manual')}</option>
-          <option value="scattered">{t('challengeOptions.scattered')}</option>
-          <option value="compliance">{t('challengeOptions.compliance')}</option>
-          <option value="other">{t('challengeOptions.other')}</option>
+          <option value="">{t("challengePlaceholder")}</option>
+          <option value="manual">{t("challengeOptions.manual")}</option>
+          <option value="scattered">{t("challengeOptions.scattered")}</option>
+          <option value="compliance">{t("challengeOptions.compliance")}</option>
+          <option value="other">{t("challengeOptions.other")}</option>
         </select>
         {errors.challenge && (
           <p className="mt-1 text-sm text-red-600">{errors.challenge}</p>
@@ -237,13 +240,11 @@ export function ContactForm() {
             : "bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
         }`}
       >
-        {isSubmitting ? t('submitting') : t('submit')}
+        {isSubmitting ? t("submitting") : t("submit")}
       </button>
 
       {errors.challenge && !formData.challenge && (
-        <p className="text-center text-sm text-red-600">
-          {t('error')}
-        </p>
+        <p className="text-center text-sm text-red-600">{t("error")}</p>
       )}
     </form>
   );

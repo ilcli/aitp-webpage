@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Services() {
+  const t = useTranslations("servicesPage");
+  const locale = useLocale();
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -12,11 +18,10 @@ export default function Services() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              Our Services
+              {t("title")}
             </h1>
             <p className="mt-6 text-lg leading-8 text-accent-600 dark:text-accent-400">
-              We specialize in three core areas that transform how teams work
-              with AI.
+              {t("subtitle")}
             </p>
           </div>
         </div>
@@ -32,43 +37,26 @@ export default function Services() {
                 <span className="text-xl text-white">⚙️</span>
               </div>
               <h3 className="mb-4 text-2xl font-bold text-foreground">
-                AI Automation
+                {t("aiAutomation.title")}
               </h3>
               <p className="mb-6 text-accent-600 dark:text-accent-400">
-                Transform repetitive tasks into intelligent workflows that save
-                hours every day.
+                {t("aiAutomation.description")}
               </p>
               <ul className="mb-6 space-y-3 text-accent-700 dark:text-accent-300">
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Document processing & data extraction
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Email and communication automation
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Workflow optimization
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Custom AI integrations
-                </li>
+                {[1, 2, 3, 4].map((num) => (
+                  <li key={num} className="flex items-start">
+                    <span className="mr-2 text-primary-600 dark:text-primary-400">
+                      ✓
+                    </span>
+                    {t(`aiAutomation.features.${num}`)}
+                  </li>
+                ))}
               </ul>
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="btn-primary block w-full text-center"
               >
-                Learn More
+                {t("learnMore")}
               </Link>
             </div>
 
@@ -78,43 +66,26 @@ export default function Services() {
                 <span className="text-xl text-white">🎯</span>
               </div>
               <h3 className="mb-4 text-2xl font-bold text-foreground">
-                Training & Change
+                {t("training.title")}
               </h3>
               <p className="mb-6 text-accent-600 dark:text-accent-400">
-                Help your team adopt AI tools effectively with hands-on training
-                and support.
+                {t("training.description")}
               </p>
               <ul className="mb-6 space-y-3 text-accent-700 dark:text-accent-300">
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  AI literacy workshops
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Tool-specific training programs
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Change management support
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Ongoing mentorship
-                </li>
+                {[1, 2, 3, 4].map((num) => (
+                  <li key={num} className="flex items-start">
+                    <span className="mr-2 text-primary-600 dark:text-primary-400">
+                      ✓
+                    </span>
+                    {t(`training.features.${num}`)}
+                  </li>
+                ))}
               </ul>
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="btn-primary block w-full text-center"
               >
-                Learn More
+                {t("learnMore")}
               </Link>
             </div>
 
@@ -124,43 +95,26 @@ export default function Services() {
                 <span className="text-xl text-white">🔧</span>
               </div>
               <h3 className="mb-4 text-2xl font-bold text-foreground">
-                No-Code Systems
+                {t("noCode.title")}
               </h3>
               <p className="mb-6 text-accent-600 dark:text-accent-400">
-                Build powerful AI-driven systems without complex coding or
-                technical overhead.
+                {t("noCode.description")}
               </p>
               <ul className="mb-6 space-y-3 text-accent-700 dark:text-accent-300">
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Airtable & Notion integrations
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Zapier & Make.com workflows
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  Custom dashboard creation
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary-600 dark:text-primary-400">
-                    ✓
-                  </span>
-                  API integrations
-                </li>
+                {[1, 2, 3, 4].map((num) => (
+                  <li key={num} className="flex items-start">
+                    <span className="mr-2 text-primary-600 dark:text-primary-400">
+                      ✓
+                    </span>
+                    {t(`noCode.features.${num}`)}
+                  </li>
+                ))}
               </ul>
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="btn-primary block w-full text-center"
               >
-                Learn More
+                {t("learnMore")}
               </Link>
             </div>
           </div>
@@ -171,57 +125,22 @@ export default function Services() {
       <section className="bg-accent-50 py-16 dark:bg-accent-900">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center text-3xl font-bold text-foreground">
-            Our Process
+            {t("process.title")}
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600">
-                <span className="font-bold text-white">1</span>
+            {["discover", "design", "deploy", "deliver"].map((step, index) => (
+              <div key={step} className="text-center">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600">
+                  <span className="font-bold text-white">{index + 1}</span>
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-foreground">
+                  {t(`process.${step}.title`)}
+                </h3>
+                <p className="text-sm text-accent-600 dark:text-accent-400">
+                  {t(`process.${step}.description`)}
+                </p>
               </div>
-              <h3 className="mb-2 text-lg font-semibold text-foreground">
-                Discover
-              </h3>
-              <p className="text-sm text-accent-600 dark:text-accent-400">
-                We understand your current workflows and identify automation
-                opportunities.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600">
-                <span className="font-bold text-white">2</span>
-              </div>
-              <h3 className="mb-2 text-lg font-semibold text-foreground">
-                Design
-              </h3>
-              <p className="text-sm text-accent-600 dark:text-accent-400">
-                Together, we design systems that fit your team&apos;s needs and
-                capabilities.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600">
-                <span className="font-bold text-white">3</span>
-              </div>
-              <h3 className="mb-2 text-lg font-semibold text-foreground">
-                Deploy
-              </h3>
-              <p className="text-sm text-accent-600 dark:text-accent-400">
-                We build and implement the solution with your team every step of
-                the way.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600">
-                <span className="font-bold text-white">4</span>
-              </div>
-              <h3 className="mb-2 text-lg font-semibold text-foreground">
-                Deliver
-              </h3>
-              <p className="text-sm text-accent-600 dark:text-accent-400">
-                We train your team and provide ongoing support for sustainable
-                success.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -230,14 +149,16 @@ export default function Services() {
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 text-3xl font-bold text-foreground">
-            Ready to Get Started?
+            {t("cta.title")}
           </h2>
           <p className="mb-8 text-lg text-accent-600 dark:text-accent-400">
-            Let&apos;s discuss which service would be the best fit for your
-            team.
+            {t("cta.description")}
           </p>
-          <Link href="/contact" className="btn-primary inline-block">
-            Schedule a Consultation
+          <Link
+            href={`/${locale}/contact`}
+            className="btn-primary inline-block"
+          >
+            {t("cta.button")}
           </Link>
         </div>
       </section>

@@ -1,8 +1,15 @@
+"use client";
+
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ContactForm } from "@/components/contact-form";
+import { CalendlyWidget } from "@/components/calendly-widget";
+import { useTranslations } from "next-intl";
+import { EXTERNAL_LINKS } from "@/config/links";
 
 export default function Contact() {
+  const t = useTranslations("contact");
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -12,39 +19,52 @@ export default function Contact() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              Let&apos;s Talk
+              {t("title")}
             </h1>
             <p className="mt-6 text-lg leading-8 text-accent-600 dark:text-accent-400">
-              Ready to transform your municipal operations with smart automation? We&apos;d love
-              to hear from you.
+              {t("subtitle")}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Content */}
+      {/* Two Column Layout: Calendly and Contact Form */}
       <section className="py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-            {/* Contact Form */}
+            {/* Calendly Widget */}
             <div>
-              <h2 className="mb-6 text-2xl font-bold text-foreground">
-                Send us a message
-              </h2>
-              <ContactForm />
+              <div className="mb-6">
+                <h2 className="mb-2 text-2xl font-bold text-foreground">
+                  {t("scheduleSection.title")}
+                </h2>
+                <p className="text-accent-600 dark:text-accent-400">
+                  {t("scheduleSection.subtitle")}
+                </p>
+              </div>
+              <div className="rounded-lg border border-accent-200 bg-white p-4 shadow-lg dark:border-accent-700 dark:bg-accent-900">
+                <CalendlyWidget height="600px" primaryColor="#3B82F6" />
+              </div>
             </div>
 
-            {/* Contact Information */}
+            {/* Contact Form and Info */}
             <div>
-              <h2 className="mb-6 text-2xl font-bold text-foreground">
-                Get in touch
-              </h2>
+              <div className="mb-8">
+                <h2 className="mb-2 text-2xl font-bold text-foreground">
+                  {t("sendMessage")}
+                </h2>
+                <p className="text-accent-600 dark:text-accent-400">
+                  {t("scheduleSection.preferEmail")}
+                </p>
+              </div>
+              <ContactForm />
 
-              <div className="space-y-8">
-                <div>
-                  <h3 className="mb-3 text-lg font-semibold text-foreground">
-                    Email Us
-                  </h3>
+              {/* Quick Contact Info */}
+              <div className="mt-8 rounded-lg bg-accent-50 p-6 dark:bg-accent-900">
+                <h3 className="mb-4 text-lg font-semibold text-foreground">
+                  {t("quickContact.title")}
+                </h3>
+                <div className="space-y-3">
                   <div className="flex items-center text-accent-600 dark:text-accent-400">
                     <svg
                       className="mr-3 h-5 w-5"
@@ -60,73 +80,33 @@ export default function Contact() {
                       />
                     </svg>
                     <a
-                      href="mailto:hello@synqer.ai"
+                      href={`mailto:${EXTERNAL_LINKS.contact.email}`}
                       className="transition-colors hover:text-primary-600 dark:hover:text-primary-400"
                     >
-                      hello@synqer.ai
+                      {EXTERNAL_LINKS.contact.email}
                     </a>
                   </div>
-                  <p className="mt-2 text-sm text-accent-500 dark:text-accent-400">
-                    We typically respond within 24 hours
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="mb-3 text-lg font-semibold text-foreground">
-                    Connect on Telegram
-                  </h3>
                   <div className="flex items-center text-accent-600 dark:text-accent-400">
                     <svg
                       className="mr-3 h-5 w-5"
-                      fill="currentColor"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm5.568 8.16c-.169 1.858-.896 6.728-.896 6.728-.302 1.578-.886 1.863-1.461 1.863-.678 0-.97-.447-1.687-1.085-.509-.453-2.267-1.613-2.267-1.613s-.38-.283-.38-.896c0-.612.38-.896.653-1.169.274-.274 4.503-4.503 4.503-4.503s.274-.274.274-.612c0-.339-.274-.613-.548-.613-.273 0-.547.274-4.503 4.503-.339.339-.678.339-1.017.339s-.678 0-1.017-.339c0 0-2.267-1.613-2.267-1.613-.717-.638-1.009-1.085-1.687-1.085-.575 0-1.159.285-1.461 1.863 0 0-.727 4.87-.896 6.728C5.168 15.238 5.168 16 6.5 16s2.832-1.762 2.832-1.762c.612-.453 1.491-1.085 2.668-1.935 1.177.85 2.056 1.482 2.668 1.935 0 0 1.5 1.762 2.832 1.762s1.332-.762 0-2.84z" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
                     </svg>
                     <a
-                      href="https://t.me/synqerai"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={`tel:${EXTERNAL_LINKS.contact.phone}`}
                       className="transition-colors hover:text-primary-600 dark:hover:text-primary-400"
                     >
-                      @synqerai
+                      {EXTERNAL_LINKS.contact.phoneDisplay}
                     </a>
                   </div>
-                  <p className="mt-2 text-sm text-accent-500 dark:text-accent-400">
-                    For quick questions and updates
-                  </p>
-                </div>
-
-                <div className="rounded-lg bg-accent-50 p-6 dark:bg-accent-900">
-                  <h3 className="mb-3 text-lg font-semibold text-foreground">
-                    What to expect
-                  </h3>
-                  <ul className="space-y-2 text-sm text-accent-700 dark:text-accent-300">
-                    <li className="flex items-start">
-                      <span className="mr-2 mt-0.5 text-primary-600 dark:text-primary-400">
-                        ✓
-                      </span>
-                      Initial response within 24 hours
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2 mt-0.5 text-primary-600 dark:text-primary-400">
-                        ✓
-                      </span>
-                      Free 30-minute consultation call
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2 mt-0.5 text-primary-600 dark:text-primary-400">
-                        ✓
-                      </span>
-                      Custom proposal within 48 hours
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2 mt-0.5 text-primary-600 dark:text-primary-400">
-                        ✓
-                      </span>
-                      No pressure, just clarity
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -134,47 +114,98 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* What to Expect Section */}
       <section className="bg-accent-50 py-16 dark:bg-accent-900">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center text-3xl font-bold text-foreground">
-            Common Questions
+            {t("whatToExpect")}
+          </h2>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="text-center">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-400">
+                1
+              </div>
+              <h3 className="mb-2 font-semibold text-foreground">
+                {t("processSteps.quickResponse")}
+              </h3>
+              <p className="text-sm text-accent-600 dark:text-accent-400">
+                {t("processSteps.quickResponseDesc")}
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-400">
+                2
+              </div>
+              <h3 className="mb-2 font-semibold text-foreground">
+                {t("processSteps.discoveryCall")}
+              </h3>
+              <p className="text-sm text-accent-600 dark:text-accent-400">
+                {t("processSteps.discoveryCallDesc")}
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-400">
+                3
+              </div>
+              <h3 className="mb-2 font-semibold text-foreground">
+                {t("processSteps.customProposal")}
+              </h3>
+              <p className="text-sm text-accent-600 dark:text-accent-400">
+                {t("processSteps.customProposalDesc")}
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-400">
+                4
+              </div>
+              <h3 className="mb-2 font-semibold text-foreground">
+                {t("processSteps.noPressure")}
+              </h3>
+              <p className="text-sm text-accent-600 dark:text-accent-400">
+                {t("processSteps.noPressureDesc")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-12 text-center text-3xl font-bold text-foreground">
+            {t("commonQuestions")}
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
               <h3 className="mb-2 text-lg font-semibold text-foreground">
-                How long does a typical project take?
+                {t("faq.projectTime.question")}
               </h3>
               <p className="text-sm text-accent-600 dark:text-accent-400">
-                Most municipal automation projects take 4-8 weeks, depending on
-                complexity and integration requirements.
+                {t("faq.projectTime.answer")}
               </p>
             </div>
             <div>
               <h3 className="mb-2 text-lg font-semibold text-foreground">
-                Do you work with small teams?
+                {t("faq.smallTeams.question")}
               </h3>
               <p className="text-sm text-accent-600 dark:text-accent-400">
-                Absolutely! We work with municipalities of all sizes, from small
-                cities to large metropolitan areas.
+                {t("faq.smallTeams.answer")}
               </p>
             </div>
             <div>
               <h3 className="mb-2 text-lg font-semibold text-foreground">
-                What if we need ongoing support?
+                {t("faq.ongoingSupport.question")}
               </h3>
               <p className="text-sm text-accent-600 dark:text-accent-400">
-                We offer flexible support packages and can work with you on a
-                retainer basis for ongoing projects.
+                {t("faq.ongoingSupport.answer")}
               </p>
             </div>
             <div>
               <h3 className="mb-2 text-lg font-semibold text-foreground">
-                Can you work with our existing tools?
+                {t("faq.existingTools.question")}
               </h3>
               <p className="text-sm text-accent-600 dark:text-accent-400">
-                Yes! We specialize in integrating with your current workflow and
-                tools rather than replacing them.
+                {t("faq.existingTools.answer")}
               </p>
             </div>
           </div>
