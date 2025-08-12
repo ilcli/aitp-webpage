@@ -15,10 +15,10 @@ export function SocialProof() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+    <section className="py-16 bg-gradient-to-b from-surface to-background dark:from-gray-900 dark:to-gray-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="mb-8 text-2xl font-semibold text-gray-900 dark:text-white">
+          <h2 className="mb-8 text-2xl font-semibold text-text-primary">
             {t('title')}
           </h2>
         </div>
@@ -32,12 +32,12 @@ export function SocialProof() {
           {capabilities.map((capability, index) => (
             <div
               key={`capability-${index}`}
-              className="group flex flex-col items-center p-6 rounded-xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-700"
+              className="group flex flex-col items-center p-6 rounded-xl bg-surface dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 border border-border dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-700"
             >
               <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
                 {capability.icon}
               </div>
-              <span className="text-sm font-medium text-center text-gray-700 dark:text-gray-200 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              <span className="text-sm font-medium text-center text-text-secondary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                 {capability.name}
               </span>
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-primary-500/0 group-hover:from-primary-500/5 group-hover:to-primary-500/10 rounded-xl transition-all duration-300 pointer-events-none" />

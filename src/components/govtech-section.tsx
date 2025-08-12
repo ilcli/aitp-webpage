@@ -33,13 +33,13 @@ export function GovTechSection() {
               </div>
               <div className="ml-4">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  High Success Rate
+                  Proven Results
                 </h3>
-                <p className="text-3xl font-bold text-green-600 dark:text-green-400">90%+</p>
+                <p className="text-3xl font-bold text-green-600 dark:text-green-400">Strong</p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Organizations we help consistently receive funding approval for digital transformation initiatives
+              We help organizations navigate funding applications for digital transformation initiatives
             </p>
             <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-green-500/10 rounded-2xl transition-all duration-300 pointer-events-none" />
           </div>
@@ -54,11 +54,11 @@ export function GovTechSection() {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   Funding Available
                 </h3>
-                <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">Up to 85%</p>
+                <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">Available</p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Innovation Authority and other programs can cover most of your implementation costs
+              Innovation Authority and other programs may help with implementation costs
             </p>
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-purple-500/10 rounded-2xl transition-all duration-300 pointer-events-none" />
           </div>
@@ -71,13 +71,13 @@ export function GovTechSection() {
               </div>
               <div className="ml-4">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  Organizations Helped
+                  Growing Client Base
                 </h3>
-                <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">25+</p>
+                <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">Active</p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Successfully funded automation projects across various sectors and organization types
+              Supporting automation projects across various sectors and organization types
             </p>
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-blue-500/10 rounded-2xl transition-all duration-300 pointer-events-none" />
           </div>

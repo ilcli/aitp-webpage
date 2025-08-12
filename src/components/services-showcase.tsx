@@ -73,78 +73,146 @@ export function ServicesShowcase() {
   ];
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+    <section id="services" className="py-16 lg:py-24 bg-gradient-to-b from-surface to-background dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
             {t('title')}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-text-secondary max-w-3xl mx-auto">
             {t('subtitle')}
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${service.hoverBorder} overflow-hidden`}
-            >
-              {/* Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-              
-              {/* Content */}
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className={`w-20 h-20 ${service.iconBg} rounded-2xl flex items-center justify-center ${service.iconColor} mb-6 group-hover:scale-110 transition-all duration-300 shadow-md`}>
-                  {service.icon}
+        {/* N8N-Style Modular Services Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          {/* Main Feature Card - Process Automation */}
+          <div className="lg:col-span-7 bg-gradient-to-br from-blue-900 to-blue-800 dark:from-blue-900 dark:to-blue-800 rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
+            <div className="relative z-10">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mr-4">
+                  {services[0].icon}
                 </div>
+                <div>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-2">
+                    {t(services[0].titleKey)}
+                  </h3>
+                  <p className="text-blue-100 text-lg">
+                    Transform workflows in minutes
+                  </p>
+                </div>
+              </div>
+              
+              <p className="text-white/90 text-lg mb-8 leading-relaxed">
+                {t(services[0].descriptionKey)}
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {Array.from({ length: 3 }, (_, i) => (
+                  <div key={i} className="flex items-start bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                    <span className="text-green-400 mr-3 mt-0.5 flex-shrink-0">✓</span>
+                    <span className="text-sm text-white/90">
+                      {t(`${services[0].benefitsKey}.${i + 1}`)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              
+              <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+                Explore Automation →
+              </button>
+            </div>
+            
+            {/* Decorative Background */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full transform translate-x-32 -translate-y-32"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full transform -translate-x-24 translate-y-24"></div>
+          </div>
 
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                  {t(service.titleKey)}
-                </h3>
+          {/* Sidebar Cards */}
+          <div className="lg:col-span-5 space-y-6">
+            
+            {/* Citizen Engagement Card */}
+            <div className="bg-surface dark:bg-gray-800 rounded-2xl p-6 border border-border dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="flex items-start">
+                <div className={`w-12 h-12 ${services[1].iconBg} rounded-xl flex items-center justify-center ${services[1].iconColor} mr-4 group-hover:scale-110 transition-transform`}>
+                  {services[1].icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-text-primary mb-2">
+                    {t(services[1].titleKey)}
+                  </h3>
+                  <p className="text-text-secondary text-sm mb-4">
+                    24/7 WhatsApp & web portals
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-text-muted">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                      WhatsApp Integration
+                    </div>
+                    <div className="flex items-center text-sm text-text-muted">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                      Auto Responses
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                {/* Description */}
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  {t(service.descriptionKey)}
+            {/* Compliance & Reporting Card */}
+            <div className="bg-surface dark:bg-gray-800 rounded-2xl p-6 border border-border dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="flex items-start">
+                <div className={`w-12 h-12 ${services[2].iconBg} rounded-xl flex items-center justify-center ${services[2].iconColor} mr-4 group-hover:scale-110 transition-transform`}>
+                  {services[2].icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-text-primary mb-2">
+                    {t(services[2].titleKey)}
+                  </h3>
+                  <p className="text-text-secondary text-sm mb-4">
+                    Automated reports + training
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-text-muted">
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                      Deadline Alerts
+                    </div>
+                    <div className="flex items-center text-sm text-text-muted">
+                      <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                      Team Training
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Interactive Demo Card */}
+            <div className="bg-gradient-to-br from-surface-secondary to-surface dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 border border-border dark:border-gray-600">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 8h10a2 2 0 002-2V6a2 2 0 00-2-2H8a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-text-primary mb-2">
+                  See It In Action
+                </h4>
+                <p className="text-text-secondary text-sm mb-4">
+                  Watch how we transform your workflows
                 </p>
-
-                {/* Benefits List */}
-                <ul className="space-y-3 mb-8">
-                  {Array.from({ length: 3 }, (_, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-green-500 mr-3 mt-0.5 flex-shrink-0">✓</span>
-                      <span className="text-sm text-gray-600 dark:text-gray-300">
-                        {t(`${service.benefitsKey}.${i + 1}`)}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA Button */}
-                <button
-                  className="w-full text-center bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 px-6 py-3 rounded-lg font-medium transition-colors duration-200 border border-gray-200 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600"
-                  onClick={() => {
-                    // Scroll to specific service section or show more info
-                    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  {t(service.ctaKey)}
+                <button className="w-full bg-primary-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors">
+                  View Interactive Demo
                 </button>
               </div>
-
-              {/* Decorative Element */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-500/5 to-transparent rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
             </div>
-          ))}
+
+          </div>
         </div>
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+          <p className="text-lg text-text-secondary mb-6">
             {t('bottomCta.text')}
           </p>
           <a

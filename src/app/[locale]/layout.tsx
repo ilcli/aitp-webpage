@@ -8,7 +8,7 @@ import { locales } from '@/i18n/config';
 
 export const metadata: Metadata = {
   title: "Synqer.ai - Smart Municipal Solutions",
-  description: "Transform outdated municipal systems into smart, automated solutions. Reduce manual work by 80-90% and accelerate report generation.",
+  description: "Transform outdated organizational systems into smart, automated solutions. Significantly reduce manual work and accelerate report generation.",
   keywords: "municipal automation, government AI, smart city, data processing, compliance, reporting",
   authors: [{ name: "Synqer.ai" }],
   icons: {

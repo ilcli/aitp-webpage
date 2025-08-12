@@ -16,7 +16,7 @@ export default function About() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-accent-600 dark:text-accent-400">
               We specialize in smart automation solutions that transform municipal
-              operations and reduce manual work by 80-90%.
+              operations and significantly reduce manual work.
             </p>
           </div>
         </div>

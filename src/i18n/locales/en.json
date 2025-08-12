@@ -6,22 +6,22 @@
     "cta": "Book 30-Min Demo"
   },
   "hero": {
-    "headline": "Municipal automation built for Israeli government workflows",
+    "headline": "Smart automation built for complex organizational workflows",
     "subheadline": "— no IT required",
     "typewriter": {
       "words": ["Legacy Systems", "Manual Workflows", "Data Silos", "Complex Processes"]
     },
     "subtitle": "into Smart Business Solutions",
-    "subheading": "Transform manual processes into automated workflows. Generate compliance reports instantly. Enable citizen self-service through multiple channels including WhatsApp.",
+    "subheading": "Transform manual processes into automated workflows. Generate compliance reports instantly. Enable client self-service through multiple channels including WhatsApp.",
     "benefits": {
-      "1": "Automate manual data entry in minutes, not months",
+      "1": "Automate manual data entry with simple setup",
       "2": "Generate compliance reports with one click",
-      "3": "Enable 24/7 citizen services and self-service"
+      "3": "Enable 24/7 client services and self-service"
     },
     "cta": {
       "primary": "Book Your 30-Minute Demo",
       "secondary": "View Demo",
-      "expectation": "In 30 minutes, we'll map your workflows and identify automation opportunities for your municipal operations"
+      "expectation": "In 30 minutes, we'll map your workflows and identify automation opportunities for your organization"
     },
     "dashboard": {
       "title": "Operations Command Center",
@@ -30,7 +30,7 @@
       "metric2": "Report Generation",
       "metric2Value": "Automated",
       "metric3": "Data Accuracy",
-      "metric3Value": "99.9%",
+      "metric3Value": "High",
       "status": "Real-time monitoring active"
     }
   },

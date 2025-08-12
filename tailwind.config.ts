@@ -23,15 +23,15 @@ const config: Config = {
           900: "#1e3a8a",
         },
         accent: {
-          50: "#f0fdfa",
-          100: "#ccfbf1",
-          200: "#99f6e4",
-          300: "#5eead4",
-          400: "#2dd4bf",
-          500: "#00cbd8",  // Cyan - enhanced for dark mode
-          600: "#00a7b0",
-          700: "#0f766e",
-          800: "#071826",  // Dark surface color
+          50: "#f7fafc",
+          100: "#edf2f7",
+          200: "#e2e8f0",
+          300: "#cbd5e0",
+          400: "#a0aec0",
+          500: "#718096",  // Better contrast for light mode text
+          600: "#4a5568",  // High contrast for light mode text  
+          700: "#2d3748",  // Very high contrast for light mode
+          800: "#1a202c",  // Dark surface color
           900: "#06121a",  // Dark background color
         },
         neutral: {
@@ -56,6 +56,13 @@ const config: Config = {
         },
         background: "var(--background)",
         foreground: "var(--foreground)",
+        surface: "var(--surface)",
+        'surface-secondary': "var(--surface-secondary)",
+        'text-primary': "var(--text-primary)",
+        'text-secondary': "var(--text-secondary)", 
+        'text-muted': "var(--text-muted)",
+        border: "var(--border)",
+        'border-secondary': "var(--border-secondary)",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
