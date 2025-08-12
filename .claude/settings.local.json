@@ -15,7 +15,13 @@
       "Bash(npm audit:*)",
       "mcp__ide__getDiagnostics",
       "Bash(find:*)",
-      "Bash(git clean:*)"
+      "Bash(git clean:*)",
+      "Bash(git add:*)",
+      "Bash(curl:*)",
+      "Bash(grep:*)",
+      "WebFetch(domain:synqer.ai)",
+      "WebFetch(domain:www.synqer.ai)",
+      "WebFetch(domain:n8n.io)"
     ],
     "deny": []
   }
