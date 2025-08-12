@@ -9,12 +9,7 @@ import Typewriter from "typewriter-effect";
 export function Hero() {
   const t = useTranslations("hero");
 
-  const typewriterPhrases = [
-    t("typewriterPhrases.0"),
-    t("typewriterPhrases.1"),
-    t("typewriterPhrases.2"),
-    t("typewriterPhrases.3"),
-  ];
+  const typewriterPhrases = t("typewriterPhrases") as unknown as string[];
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-background to-accent-50 dark:from-accent-900 dark:via-background dark:to-accent-800">
@@ -33,9 +28,6 @@ export function Hero() {
                   deleteSpeed: 50,
                 }}
               />
-            </span>
-            <span className="mt-2 block text-primary-600 dark:text-primary-400">
-              {t("subheadline")}
             </span>
           </h1>
 
