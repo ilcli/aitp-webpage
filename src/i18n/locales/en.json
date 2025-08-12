@@ -23,7 +23,7 @@
       ]
     },
     "subtitle": "into Smart Business Solutions",
-    "subheading": "Transform complex manual processes into automated workflows deployed on your chosen infrastructure. Enable 24/7 citizen services through WhatsApp and web portals.",
+    "subheading": "Transform complex manual processes into automated workflows deployed on your chosen infrastructure. Enable 24/7 services through WhatsApp and web portals.",
     "benefits": {
       "1": "Automate manual data entry with simple setup",
       "2": "Generate compliance reports with one click",
@@ -166,7 +166,31 @@
     "button": "Book Your 30-Minute Discovery Call",
     "button_secondary": "Learn Our Process",
     "testimonial": "Custom automation solution deployed on our infrastructure transformed our monthly reporting from a multi-day process to automated delivery. Full ownership, no ongoing fees.",
-    "author": "Municipal Finance Department"
+    "author": "Municipal Finance Department",
+    "successStory": "Client Success Story",
+    "freeConsultation": "Free consultation",
+    "noObligations": "No obligations",
+    "customSolutions": "Custom solutions"
+  },
+  "trustIndicators": {
+    "security": {
+      "title": "Bank-grade Security",
+      "subtitle": "SOC2 compliant, encrypted data"
+    },
+    "organizations": {
+      "title": "Built for Organizations",
+      "subtitle": "Designed for complex workflows"
+    },
+    "timeSavings": {
+      "title": "Significant Time Savings",
+      "subtitle": "Streamlined processing workflows"
+    },
+    "testimonial": "Synqer transformed our monthly reporting from a 3-day nightmare to a 30-minute task. Our staff can finally focus on serving citizens instead of fighting with spreadsheets.",
+    "author": {
+      "name": "Sarah Chen",
+      "title": "Operations Manager, Northern District"
+    },
+    "clientBase": "Building solutions for organizations across Israel including Major Institutions and Regional Authorities"
   },
   "footer": {
     "tagline": "Custom Automation Solutions for Government Organizations",

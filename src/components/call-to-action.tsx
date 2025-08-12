@@ -1,24 +1,24 @@
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
-import { createScheduleUrl } from '@/config/site';
+import { createScheduleUrl } from "@/config/site";
 
 export function CallToAction() {
-  const t = useTranslations('cta');
+  const t = useTranslations("cta");
   const locale = useLocale();
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+    <section className="bg-gradient-to-b from-gray-50 to-white py-16 dark:from-gray-800 dark:to-gray-900 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-purple-600 dark:from-primary-700 dark:via-primary-800 dark:to-purple-700 rounded-3xl shadow-2xl overflow-hidden">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 p-8 lg:p-16">
+        <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-primary-600 via-primary-700 to-purple-600 shadow-2xl dark:from-primary-700 dark:via-primary-800 dark:to-purple-700">
+          <div className="grid grid-cols-1 items-center gap-12 p-8 lg:grid-cols-2 lg:p-16">
             {/* Left side - Quote/Testimonial */}
             <div className="relative">
               {/* Decorative elements */}
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+              <div className="absolute -left-6 -top-6 h-24 w-24 rounded-full bg-white/10 blur-xl"></div>
+              <div className="absolute -bottom-6 -right-6 h-32 w-32 rounded-full bg-white/5 blur-2xl"></div>
 
               {/* Main testimonial card */}
-              <div className="relative bg-white/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-xl">
-                <div className="flex items-start mb-6">
+              <div className="relative rounded-2xl border border-white/20 bg-white/20 p-8 shadow-xl backdrop-blur-lg">
+                <div className="mb-6 flex items-start">
                   <svg
                     className="mr-4 mt-1 h-8 w-8 flex-shrink-0 text-white/90"
                     fill="currentColor"
@@ -28,15 +28,17 @@ export function CallToAction() {
                   </svg>
                   <div>
                     <blockquote className="mb-6 text-xl font-medium leading-relaxed text-white">
-                      &ldquo;{t('testimonial')}&rdquo;
+                      &ldquo;{t("testimonial")}&rdquo;
                     </blockquote>
                     <div className="flex items-center">
                       <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/30 backdrop-blur-sm">
                         <span className="text-lg font-bold text-white">S</span>
                       </div>
                       <div>
-                        <p className="font-semibold text-white">Client Success Story</p>
-                        <p className="text-sm text-white/80">{t('author')}</p>
+                        <p className="font-semibold text-white">
+                          {t("successStory")}
+                        </p>
+                        <p className="text-sm text-white/80">{t("author")}</p>
                       </div>
                     </div>
                   </div>
@@ -46,55 +48,85 @@ export function CallToAction() {
 
             {/* Right side - CTA Content */}
             <div className="text-white">
-              <h2 className="mb-6 text-3xl lg:text-4xl font-bold leading-tight">
-                {t('title')}
+              <h2 className="mb-6 text-3xl font-bold leading-tight lg:text-4xl">
+                {t("title")}
               </h2>
               <p className="mb-8 text-xl leading-relaxed text-white/90">
-                {t('subtitle')}
+                {t("subtitle")}
               </p>
 
-              <div className="space-y-4 sm:flex sm:space-x-6 sm:space-y-0 mb-8">
+              <div className="mb-8 space-y-4 sm:flex sm:space-x-6 sm:space-y-0">
                 <a
-                  href={createScheduleUrl('cta-section')}
+                  href={createScheduleUrl("cta-section")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-white text-primary-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
+                  className="inline-flex w-full transform items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-bold text-primary-600 shadow-lg transition-all duration-200 hover:scale-105 hover:bg-gray-100 hover:shadow-xl sm:w-auto"
                 >
-                  {t('button')}
+                  {t("button")}
                 </a>
                 <Link
                   href={`/${locale}/about`}
-                  className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-600 transition-colors duration-200 w-full sm:w-auto"
+                  className="inline-flex w-full items-center justify-center rounded-full border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-primary-600 sm:w-auto"
                 >
-                  {t('button_secondary') || 'Learn Our Process'}
+                  {t("button_secondary") || "Learn Our Process"}
                 </Link>
               </div>
 
               {/* Trust indicators with enhanced styling */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white/90">
-                <div className="flex items-center bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              <div className="grid grid-cols-1 gap-4 text-white/90 sm:grid-cols-3">
+                <div className="flex items-center rounded-lg bg-white/10 px-4 py-2 backdrop-blur-sm">
+                  <div className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-500">
+                    <svg
+                      className="h-3 w-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </div>
-                  <span className="text-sm font-medium">Free consultation</span>
+                  <span className="text-sm font-medium">
+                    {t("freeConsultation")}
+                  </span>
                 </div>
-                <div className="flex items-center bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                <div className="flex items-center rounded-lg bg-white/10 px-4 py-2 backdrop-blur-sm">
+                  <div className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-500">
+                    <svg
+                      className="h-3 w-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </div>
-                  <span className="text-sm font-medium">No obligations</span>
+                  <span className="text-sm font-medium">
+                    {t("noObligations")}
+                  </span>
                 </div>
-                <div className="flex items-center bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                <div className="flex items-center rounded-lg bg-white/10 px-4 py-2 backdrop-blur-sm">
+                  <div className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-purple-500">
+                    <svg
+                      className="h-3 w-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </div>
-                  <span className="text-sm font-medium">Custom solutions</span>
+                  <span className="text-sm font-medium">
+                    {t("customSolutions")}
+                  </span>
                 </div>
               </div>
             </div>
