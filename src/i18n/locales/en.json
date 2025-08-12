@@ -49,7 +49,23 @@
   },
   "socialProof": {
     "title": "Israeli Government Technology Specialists",
-    "subtitle": "Custom solutions deployed on your preferred cloud infrastructure with Hebrew/English support and local compliance expertise"
+    "subtitle": "Custom solutions deployed on your preferred cloud infrastructure with Hebrew/English support and local compliance expertise",
+    "capabilities": {
+      "multiCloud": "Multi-Cloud Deployment Expertise",
+      "language": "Hebrew/English Language Support",
+      "clientOwned": "Client-Owned Infrastructure",
+      "innovation": "Innovation Authority Eligible",
+      "customDev": "Custom Development Approach",
+      "institutional": "Public & Private Sector Solutions"
+    },
+    "departments": {
+      "finance": "Finance & Budgeting",
+      "planning": "Urban Planning",
+      "permits": "Permits & Licensing",
+      "citizen": "Citizen Services",
+      "compliance": "Compliance & Reporting",
+      "publicWorks": "Public Works"
+    }
   },
   "services": {
     "title": "Custom Automation Solutions for Government Organizations",
