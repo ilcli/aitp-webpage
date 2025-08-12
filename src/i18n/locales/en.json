@@ -6,22 +6,22 @@
     "cta": "Book 30-Min Demo"
   },
   "hero": {
-    "headline": "Smart automation built for complex organizational workflows",
-    "subheadline": "— no IT required",
+    "headline": "Custom automation solutions for Israeli municipalities and organizations",
+    "subheadline": "— deployed on your preferred infrastructure",
     "typewriter": {
       "words": ["Legacy Systems", "Manual Workflows", "Data Silos", "Complex Processes"]
     },
     "subtitle": "into Smart Business Solutions",
-    "subheading": "Transform manual processes into automated workflows. Generate compliance reports instantly. Enable client self-service through multiple channels including WhatsApp.",
+    "subheading": "Transform complex manual processes into automated workflows deployed on Azure, Railway, or your chosen infrastructure. Enable 24/7 citizen services through WhatsApp and web portals.",
     "benefits": {
       "1": "Automate manual data entry with simple setup",
       "2": "Generate compliance reports with one click",
       "3": "Enable 24/7 client services and self-service"
     },
     "cta": {
-      "primary": "Book Your 30-Minute Demo",
+      "primary": "Book Your 30-Minute Discovery Call",
       "secondary": "View Demo",
-      "expectation": "In 30 minutes, we'll map your workflows and identify automation opportunities for your organization"
+      "expectation": "In 30 minutes, we'll assess your workflows and design a custom automation solution for your infrastructure"
     },
     "dashboard": {
       "title": "Operations Command Center",
@@ -35,45 +35,58 @@
     }
   },
   "socialProof": {
-    "title": "Specialized for Israeli Municipal Excellence",
-    "subtitle": "Built specifically for Hebrew/English workflows and local compliance standards"
+    "title": "Israeli Government Technology Specialists",
+    "subtitle": "Custom solutions deployed on your preferred cloud infrastructure with Hebrew/English support and local compliance expertise"
   },
   "services": {
-    "title": "Three Ways We Transform Your Operations",
-    "subtitle": "Choose what fits your team's needs",
+    "title": "Custom Automation Solutions for Government Organizations",
+    "subtitle": "Deployed on your preferred infrastructure with full client ownership",
     "processAutomation": {
-      "title": "Process Automation",
-      "description": "Transform manual workflows into automated systems that save hours every day. From Excel chaos to one-click reporting.",
+      "title": "Custom Workflow Automation",
+      "description": "Bespoke automation solutions deployed on Azure, Railway, or your chosen infrastructure. From Excel chaos to automated reporting systems.",
       "benefits": {
-        "1": "Turn weekly reporting from multi-day process to single click",
-        "2": "Eliminate manual data entry and PDF-to-spreadsheet copying",
-        "3": "Connect scattered departmental systems with unified data flow"
+        "1": "Custom development tailored to your existing systems and compliance needs",
+        "2": "Deploy on your preferred cloud infrastructure or on-premises environment",
+        "3": "Full ownership and control - no vendor lock-in or ongoing subscriptions"
       },
-      "cta": "Learn More"
+      "cta": "Schedule Discovery Call"
     },
     "citizenEngagement": {
-      "title": "Citizen Engagement Platform",
-      "description": "Enable 24/7 citizen services through WhatsApp, web portals, and automated responses. Meet residents where they are.",
+      "title": "WhatsApp Business Integration",
+      "description": "Custom WhatsApp Business API integration deployed on your infrastructure. Enable 24/7 citizen services while maintaining full data control.",
       "benefits": {
-        "1": "WhatsApp service portal for permit status and payments",
-        "2": "Automated responses handle common inquiries instantly",
-        "3": "Multi-channel communication with unified tracking"
+        "1": "WhatsApp Business API integration with your existing municipal systems",
+        "2": "Deploy on your chosen cloud provider with complete data sovereignty",
+        "3": "Custom automation workflows connecting WhatsApp to your databases"
       },
-      "cta": "Learn More"
+      "cta": "Discuss Integration"
     },
     "complianceReporting": {
-      "title": "Compliance & Reporting",
-      "description": "Never miss regulatory deadlines again. Automated compliance reports with current data, plus training for your entire team.",
+      "title": "Compliance Automation Systems",
+      "description": "Custom compliance and reporting solutions built for Israeli regulatory requirements. Deploy on secure infrastructure with complete team training.",
       "benefits": {
-        "1": "Automatic alerts and state-required document generation",
-        "2": "Real-time compliance monitoring and deadline management",
-        "3": "Complete team training and ongoing support included"
+        "1": "Automated generation of state-required documents and regulatory reports",
+        "2": "Built-in Israeli compliance workflows and deadline management systems",
+        "3": "Comprehensive team training and handover with full system ownership"
       },
-      "cta": "Learn More"
+      "cta": "Explore Solutions"
     },
     "bottomCta": {
-      "text": "Ready to see how these solutions work for your specific department?",
-      "button": "Book Your 30-Minute Demo"
+      "text": "Ready to discuss a custom automation solution for your organization?",
+      "button": "Book Your 30-Minute Discovery Call"
+    },
+    "hardcoded": {
+      "workflowsInMinutes": "Transform workflows in minutes",
+      "exploreAutomation": "Explore Automation →",
+      "whatsappIntegration": "24/7 WhatsApp & web portals",
+      "whatsappIntegrationPoint": "WhatsApp Integration",
+      "autoResponses": "Auto Responses",
+      "automatedReportsTraining": "Automated reports + training",
+      "deadlineAlerts": "Deadline Alerts",
+      "teamTraining": "Team Training",
+      "seeItInAction": "See It In Action",
+      "watchDemo": "Watch how we transform your workflows",
+      "viewInteractiveDemo": "View Interactive Demo"
     }
   },
   "features": {
@@ -137,15 +150,15 @@
     }
   },
   "cta": {
-    "title": "Ready to Stop the Manual Madness?",
-    "subtitle": "30 minutes is all it takes to see how much time you'll save",
-    "button": "Book Your 30-Minute Demo",
+    "title": "Ready to Transform Your Operations?",
+    "subtitle": "30 minutes to assess your workflows and design your custom automation solution",
+    "button": "Book Your 30-Minute Discovery Call",
     "button_secondary": "Learn Our Process",
-    "testimonial": "Transformed our monthly reporting from a multi-day process to automated delivery. Our staff can now focus on serving citizens instead of fighting spreadsheets.",
+    "testimonial": "Custom automation solution deployed on our infrastructure transformed our monthly reporting from a multi-day process to automated delivery. Full ownership, no ongoing fees.",
     "author": "Municipal Finance Department"
   },
   "footer": {
-    "tagline": "Intelligent Automation for Modern Organizations",
+    "tagline": "Custom Automation Solutions for Government Organizations",
     "contact": {
       "title": "Contact",
       "email": "hello@synqer.ai",
@@ -160,8 +173,8 @@
     "copyright": "© 2024 Synqer.ai. All rights reserved."
   },
   "contact": {
-    "title": "Let's Transform Your Organization",
-    "subtitle": "Schedule a consultation to discover how automation can revolutionize your operations",
+    "title": "Let's Design Your Custom Automation Solution",
+    "subtitle": "Schedule a discovery call to assess your workflows and design a tailored solution for your infrastructure",
     "form": {
       "name": "Name",
       "email": "Email",

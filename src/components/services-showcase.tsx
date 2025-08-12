@@ -100,7 +100,7 @@ export function ServicesShowcase() {
                     {t(services[0].titleKey)}
                   </h3>
                   <p className="text-blue-100 text-lg">
-                    Transform workflows in minutes
+                    {t('hardcoded.workflowsInMinutes')}
                   </p>
                 </div>
               </div>
@@ -121,7 +121,7 @@ export function ServicesShowcase() {
               </div>
               
               <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
-                Explore Automation →
+                {t('hardcoded.exploreAutomation')}
               </button>
             </div>
             
@@ -134,8 +134,10 @@ export function ServicesShowcase() {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Citizen Engagement Card */}
-            <div className="bg-surface dark:bg-gray-800 rounded-2xl p-6 border border-border dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="flex items-start">
+            <div className="bg-surface dark:bg-gray-800 rounded-2xl p-6 border border-border dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/15 to-green-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-green-300/30 dark:group-hover:border-green-500/30 transition-all duration-200"></div>
+              <div className="relative z-10 flex items-start">
                 <div className={`w-12 h-12 ${services[1].iconBg} rounded-xl flex items-center justify-center ${services[1].iconColor} mr-4 group-hover:scale-110 transition-transform`}>
                   {services[1].icon}
                 </div>
@@ -144,16 +146,16 @@ export function ServicesShowcase() {
                     {t(services[1].titleKey)}
                   </h3>
                   <p className="text-text-secondary text-sm mb-4">
-                    24/7 WhatsApp & web portals
+                    {t('hardcoded.whatsappIntegration')}
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center text-sm text-text-muted">
                       <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                      WhatsApp Integration
+                      {t('hardcoded.whatsappIntegrationPoint')}
                     </div>
                     <div className="flex items-center text-sm text-text-muted">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                      Auto Responses
+                      {t('hardcoded.autoResponses')}
                     </div>
                   </div>
                 </div>
@@ -161,8 +163,10 @@ export function ServicesShowcase() {
             </div>
 
             {/* Compliance & Reporting Card */}
-            <div className="bg-surface dark:bg-gray-800 rounded-2xl p-6 border border-border dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="flex items-start">
+            <div className="bg-surface dark:bg-gray-800 rounded-2xl p-6 border border-border dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/15 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-purple-300/30 dark:group-hover:border-purple-500/30 transition-all duration-200"></div>
+              <div className="relative z-10 flex items-start">
                 <div className={`w-12 h-12 ${services[2].iconBg} rounded-xl flex items-center justify-center ${services[2].iconColor} mr-4 group-hover:scale-110 transition-transform`}>
                   {services[2].icon}
                 </div>
@@ -171,16 +175,16 @@ export function ServicesShowcase() {
                     {t(services[2].titleKey)}
                   </h3>
                   <p className="text-text-secondary text-sm mb-4">
-                    Automated reports + training
+                    {t('hardcoded.automatedReportsTraining')}
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center text-sm text-text-muted">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                      Deadline Alerts
+                      {t('hardcoded.deadlineAlerts')}
                     </div>
                     <div className="flex items-center text-sm text-text-muted">
                       <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                      Team Training
+                      {t('hardcoded.teamTraining')}
                     </div>
                   </div>
                 </div>
@@ -188,21 +192,23 @@ export function ServicesShowcase() {
             </div>
 
             {/* Interactive Demo Card */}
-            <div className="bg-gradient-to-br from-surface-secondary to-surface dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 border border-border dark:border-gray-600">
-              <div className="text-center">
+            <div className="bg-gradient-to-br from-surface-secondary to-surface dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 border border-border dark:border-gray-600 group relative overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500/0 via-primary-500/10 to-primary-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary-300/30 dark:group-hover:border-primary-500/30 transition-all duration-200"></div>
+              <div className="relative z-10 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 8h10a2 2 0 002-2V6a2 2 0 00-2-2H8a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <h4 className="text-lg font-semibold text-text-primary mb-2">
-                  See It In Action
+                  {t('hardcoded.seeItInAction')}
                 </h4>
                 <p className="text-text-secondary text-sm mb-4">
-                  Watch how we transform your workflows
+                  {t('hardcoded.watchDemo')}
                 </p>
                 <button className="w-full bg-primary-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors">
-                  View Interactive Demo
+                  {t('hardcoded.viewInteractiveDemo')}
                 </button>
               </div>
             </div>

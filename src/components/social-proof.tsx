@@ -6,12 +6,12 @@ export function SocialProof() {
   const t = useTranslations('socialProof');
   
   const capabilities = [
-    { name: "Government Workflow Expertise", icon: "🏛️" },
+    { name: "Multi-Cloud Deployment Expertise", icon: "☁️" },
     { name: "Hebrew/English Language Support", icon: "🌐" },
-    { name: "Local Compliance Standards", icon: "✅" },
+    { name: "Client-Owned Infrastructure", icon: "🔐" },
     { name: "Innovation Authority Eligible", icon: "🚀" },
-    { name: "Municipal Process Understanding", icon: "🏢" },
-    { name: "Israeli Tech Excellence", icon: "🇮🇱" },
+    { name: "Custom Development Approach", icon: "⚙️" },
+    { name: "Israeli Government Specialization", icon: "🇮🇱" },
   ];
 
   return (

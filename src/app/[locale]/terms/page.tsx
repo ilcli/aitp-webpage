@@ -53,18 +53,18 @@ export default function Terms() {
 
             <section>
               <h2 className="mb-4 text-2xl font-semibold text-foreground">
-                {isHebrew ? '3. רישום חשבון' : '3. Account Registration'}
+                {isHebrew ? '3. תהליך העבודה והאבטחה' : '3. Project Workflow & Security'}
               </h2>
               <p className="mb-4">
                 {isHebrew 
-                  ? 'כדי להשתמש בשירותים מסוימים, ייתכן שתצטרך ליצור חשבון. אתה מתחייב:'
-                  : 'To use certain Services, you may need to create an account. You agree to:'}
+                  ? 'כל הפיתוח והקמה מתבצעים בסביבה מאובטחת שאינה חלק מהאתר. תהליך העבודה כולל:'
+                  : 'All development and deployment occurs in secure environments separate from this website. Our workflow includes:'}
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>{isHebrew ? 'לספק מידע מדויק, עדכני ומלא' : 'Provide accurate, current, and complete information'}</li>
-                <li>{isHebrew ? 'לשמור על אבטחת הסיסמה שלך' : 'Maintain the security of your password'}</li>
-                <li>{isHebrew ? 'להודיע לנו מיד על כל שימוש לא מורשה' : 'Notify us immediately of any unauthorized use'}</li>
-                <li>{isHebrew ? 'לקחת אחריות על כל הפעילות בחשבון שלך' : 'Accept responsibility for all activities under your account'}</li>
+                <li>{isHebrew ? 'שיחת גילוי ראשונית דרך האתר (30 דקות)' : 'Initial discovery call booked through website (30 minutes)'}</li>
+                <li>{isHebrew ? 'הצעה והסכם נפרד לפיתוח מותאם אישית' : 'Separate proposal and agreement for custom development'}</li>
+                <li>{isHebrew ? 'פיתוח והקמה בסביבה מאובטחת שבשליטת הלקוח' : 'Development and deployment in secure client-controlled environment'}</li>
+                <li>{isHebrew ? 'העברת בעלות מלאה וגישות ללקוח עם סיום הפרויקט' : 'Full ownership and access transfer to client upon project completion'}</li>
               </ul>
             </section>
 
@@ -215,7 +215,7 @@ export default function Terms() {
 
             <section>
               <h2 className="mb-4 text-2xl font-semibold text-foreground">
-                {isHebrew ? '14. עוגיות באקסלנס' : '14. Force Majeure'}
+                {isHebrew ? '14. כוח עליון' : '14. Force Majeure'}
               </h2>
               <p>
                 {isHebrew 

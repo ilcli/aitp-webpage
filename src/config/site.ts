@@ -1,15 +1,8 @@
-const BASE_SCHEDULE_URL = 'https://calendly.com/elifishbakh/30min';
+// Re-export from centralized links config
+export { createScheduleUrl, EXTERNAL_LINKS } from './links';
+import { createScheduleUrl } from './links';
 
-// Create schedule URL with UTM parameters
-export const createScheduleUrl = (source: string = 'website', medium: string = 'cta', campaign: string = 'consultation') => {
-  const url = new URL(BASE_SCHEDULE_URL);
-  url.searchParams.set('utm_source', source);
-  url.searchParams.set('utm_medium', medium);
-  url.searchParams.set('utm_campaign', campaign);
-  return url.toString();
-};
-
-// Default schedule URL
+// Default schedule URL  
 export const SCHEDULE_URL = createScheduleUrl();
 
 export const siteConfig = {
