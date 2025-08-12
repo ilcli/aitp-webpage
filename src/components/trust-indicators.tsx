@@ -4,45 +4,60 @@ import { ShieldCheckIcon, BuildingOfficeIcon, ChartBarIcon } from '@heroicons/re
 
 export function TrustIndicators() {
   return (
-    <section className="bg-white dark:bg-accent-900 py-12 border-y border-accent-200 dark:border-accent-800">
+    <section className="py-16 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Trust Points */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 mb-8">
-          <div className="flex items-center space-x-3">
-            <ShieldCheckIcon className="h-8 w-8 text-green-600 flex-shrink-0" />
-            <div>
-              <p className="font-semibold text-foreground">Bank-grade Security</p>
-              <p className="text-sm text-accent-600 dark:text-accent-400">SOC2 compliant, encrypted data</p>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 mb-12">
+          <div className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-green-200 dark:hover:border-green-700">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600 dark:text-green-400" />
+              </div>
+              <div>
+                <p className="font-semibold text-foreground group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">Bank-grade Security</p>
+                <p className="text-sm text-accent-600 dark:text-accent-400">SOC2 compliant, encrypted data</p>
+              </div>
             </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-green-500/10 rounded-xl transition-all duration-300 pointer-events-none" />
           </div>
           
-          <div className="flex items-center space-x-3">
-            <BuildingOfficeIcon className="h-8 w-8 text-blue-600 flex-shrink-0" />
-            <div>
-              <p className="font-semibold text-foreground">Built for Municipalities</p>
-              <p className="text-sm text-accent-600 dark:text-accent-400">Designed specifically for government workflows</p>
+          <div className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-700">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <BuildingOfficeIcon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <div>
+                <p className="font-semibold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Built for Organizations</p>
+                <p className="text-sm text-accent-600 dark:text-accent-400">Designed for complex workflows</p>
+              </div>
             </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:to-blue-500/10 rounded-xl transition-all duration-300 pointer-events-none" />
           </div>
           
-          <div className="flex items-center space-x-3">
-            <ChartBarIcon className="h-8 w-8 text-purple-600 flex-shrink-0" />
-            <div>
-              <p className="font-semibold text-foreground">72% Time Reduction</p>
-              <p className="text-sm text-accent-600 dark:text-accent-400">Average processing time saved</p>
+          <div className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-700">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <ChartBarIcon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+              </div>
+              <div>
+                <p className="font-semibold text-foreground group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">72% Time Reduction</p>
+                <p className="text-sm text-accent-600 dark:text-accent-400">Average processing time saved</p>
+              </div>
             </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-purple-500/10 rounded-xl transition-all duration-300 pointer-events-none" />
           </div>
         </div>
 
         {/* Testimonial */}
-        <div className="border-t border-accent-200 dark:border-accent-800 pt-8">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
           <blockquote className="text-center">
-            <p className="text-lg italic text-accent-700 dark:text-accent-300 mb-3">
+            <p className="text-lg italic text-accent-700 dark:text-accent-300 mb-4">
               &ldquo;Synqer transformed our monthly reporting from a 3-day nightmare to a 30-minute task. 
               Our staff can finally focus on serving citizens instead of fighting with spreadsheets.&rdquo;
             </p>
             <footer className="text-sm">
               <span className="font-semibold text-foreground">Sarah Chen</span>
-              <span className="text-accent-600 dark:text-accent-400"> — Operations Manager, Northern District Municipality</span>
+              <span className="text-accent-600 dark:text-accent-400"> — Operations Manager, Northern District</span>
             </footer>
           </blockquote>
         </div>
@@ -50,7 +65,7 @@ export function TrustIndicators() {
         {/* Client Indicators */}
         <div className="mt-8 text-center">
           <p className="text-sm text-accent-600 dark:text-accent-400 font-medium">
-            Trusted by 15+ municipalities across Israel including Major City Councils and Regional Planning Authorities
+            Trusted by 15+ organizations across Israel including Major Institutions and Regional Authorities
           </p>
         </div>
       </div>

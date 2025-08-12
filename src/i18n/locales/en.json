@@ -38,6 +38,44 @@
     "title": "Specialized for Israeli Municipal Excellence",
     "subtitle": "Built specifically for Hebrew/English workflows and local compliance standards"
   },
+  "services": {
+    "title": "Three Ways We Transform Your Operations",
+    "subtitle": "Choose what fits your team's needs",
+    "processAutomation": {
+      "title": "Process Automation",
+      "description": "Transform manual workflows into automated systems that save hours every day. From Excel chaos to one-click reporting.",
+      "benefits": {
+        "1": "Turn weekly reporting from multi-day process to single click",
+        "2": "Eliminate manual data entry and PDF-to-spreadsheet copying",
+        "3": "Connect scattered departmental systems with unified data flow"
+      },
+      "cta": "Learn More"
+    },
+    "citizenEngagement": {
+      "title": "Citizen Engagement Platform",
+      "description": "Enable 24/7 citizen services through WhatsApp, web portals, and automated responses. Meet residents where they are.",
+      "benefits": {
+        "1": "WhatsApp service portal for permit status and payments",
+        "2": "Automated responses handle common inquiries instantly",
+        "3": "Multi-channel communication with unified tracking"
+      },
+      "cta": "Learn More"
+    },
+    "complianceReporting": {
+      "title": "Compliance & Reporting",
+      "description": "Never miss regulatory deadlines again. Automated compliance reports with current data, plus training for your entire team.",
+      "benefits": {
+        "1": "Automatic alerts and state-required document generation",
+        "2": "Real-time compliance monitoring and deadline management",
+        "3": "Complete team training and ongoing support included"
+      },
+      "cta": "Learn More"
+    },
+    "bottomCta": {
+      "text": "Ready to see how these solutions work for your specific department?",
+      "button": "Book Your 30-Minute Demo"
+    }
+  },
   "features": {
     "title": "Your Excel Hell, Solved",
     "subtitle": "Stop copying and pasting. Start automating the work that eats your day.",
