@@ -113,8 +113,7 @@ export function ContactForm() {
           {t("success")}
         </h3>
         <p className="text-green-700 dark:text-green-300">
-          We&apos;ll get back to you within 24 hours to discuss your municipal
-          automation needs.
+          {t("successMessage")}
         </p>
       </div>
     );
