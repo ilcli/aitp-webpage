@@ -56,6 +56,20 @@ const fallbackMessages = {
         status: "Real-time monitoring active",
       },
     },
+    cta: {
+      title: "Ready to Transform Your Operations?",
+      subtitle:
+        "30 minutes to assess your workflows and design your custom automation solution",
+      button: "Book Your 30-Minute Discovery Call",
+      button_secondary: "Learn Our Process",
+      testimonial:
+        "Custom automation solution deployed on our infrastructure transformed our monthly reporting from a multi-day process to automated delivery. Full ownership, zero ongoing fees.",
+      author: "Municipal Finance Department",
+      successStory: "Client Success Story",
+      freeConsultation: "Free Consultation",
+      noObligations: "No Obligations",
+      customSolutions: "Custom Solutions",
+    },
   },
   he: {
     nav: {
@@ -105,6 +119,20 @@ const fallbackMessages = {
         metric3Value: "גבוה",
         status: "ניטור בזמן אמת פעיל",
       },
+    },
+    cta: {
+      title: "מוכנים לשנות את התפעול שלכם?",
+      subtitle:
+        "30 דקות כדי להעריך את תזרימי העבודה שלכם ולתכנן את פתרון האוטומציה המותאם אישית שלכם",
+      button: "קבעו שיחת היכרות בת 30 דקות",
+      button_secondary: "למדו על התהליך שלנו",
+      testimonial:
+        "פתרון אוטומציה מותאם אישית הנפרס על התשתית שלנו הפך את הדיווח החודשי שלנו מתהליך של מספר ימים למסירה אוטומטית. בעלות מלאה, ללא עמלות שוטפות.",
+      author: "מחלקת כספים עירונית",
+      successStory: "סיפור הצלחה של לקוח",
+      freeConsultation: "ייעוץ חינם",
+      noObligations: "ללא התחייבויות",
+      customSolutions: "פתרונות מותאמים אישית",
     },
   },
 };

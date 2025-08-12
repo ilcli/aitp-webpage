@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { createScheduleUrl } from "@/config/site";
@@ -68,7 +70,7 @@ export function CallToAction() {
                   href={`/${locale}/about`}
                   className="inline-flex w-full items-center justify-center rounded-full border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-primary-600 sm:w-auto"
                 >
-                  {t("button_secondary") || "Learn Our Process"}
+                  {t("button_secondary")}
                 </Link>
               </div>
 
