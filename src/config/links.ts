@@ -15,8 +15,6 @@ export const EXTERNAL_LINKS = {
     email: "hello@synqer.ai",
     legalEmail: "legal@synqer.ai",
     privacyEmail: "privacy@synqer.ai",
-    phone: "+972 52-288-3402",
-    phoneDisplay: "+972 52-288-3402",
     address: "Tel Aviv, Israel",
   },
 
